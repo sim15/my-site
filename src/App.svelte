@@ -136,7 +136,7 @@
 		}
 
 		p {
-			font-size: .9em;
+			font-size: em;
 		}
 
 		.contact-icons {

@@ -10,6 +10,7 @@ html, body {
 
 body {
 	color: #E0E0E0;
+	background: linear-gradient(180deg, #34252F 0%, #110c0f 134.77%);
 	font-family: "Lato";
 	font-size: .7em;
 	font-weight: 400;
