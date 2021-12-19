@@ -163,7 +163,7 @@
 			<p>
 				I'm currently a student at the <span><a target="_blank" href="https://www.massacademy.org/" >Massachusetts Academy of Math & Science at Worcester Polytechnic Institute</a></span>. 
 				<br> <br>
-				My interests lie within computer science and mathematics, primarily within research in theoretical computer science and cryptography.
+				My interests lie within computer science and mathematics, primarily surrounding research in theoretical computer science and cryptography.
 				<br> <br>
 				Feel free to reach out or check out some of my recent work!
 			</p>
