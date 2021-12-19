@@ -64,6 +64,10 @@
 		font-weight: 700;
 	}
 
+	p {
+		margin: 0;
+	}
+
 	.contact-icons {
 		animation: floatUp .5s ease-out;
 		height: 5em;
@@ -103,16 +107,16 @@
 	}
 
 	@keyframes float {
-	0% {
-		transform: translatey(0px);
+		0% {
+			transform: translatey(0px);
+		}
+		50% {
+			transform: translatey(-4%);
+		}
+		100% {
+			transform: translatey(0px);
+		}
 	}
-	50% {
-		transform: translatey(-4%);
-	}
-	100% {
-		transform: translatey(0px);
-	}
-}
 
 	@media (max-width: 800px) {
 		.container {
@@ -120,7 +124,26 @@
 			top: 50%;
 			transform: translate(0,-50%);
 			margin: 0 4em;
+			/* font-size: .5em; */
 		}
+
+		h1 {
+			font-size: 3.5em;
+		}
+
+		h2 {
+			font-size: 1em;
+		}
+
+		p {
+			font-size: .9em;
+		}
+
+		.contact-icons {
+			margin: 2em 0;
+		}
+		/* height=${height} */
+
 	}
 </style>
 
@@ -131,9 +154,9 @@
 		<h2><span>svbeyzerov [at] wpi.edu</span></h2>
 
 		<div class="contact-icons">
-			<div  class="icon-img"><a target="_blank" href="https://www.linkedin.com/in/sim15"><Icon name="linkedin" height="60px" /></a></div>
-			<div  class="icon-img"><a target="_blank" href="https://github.com/sim15/"><Icon name="github" height="60px" /></a></div>
-			<div  class="icon-img"><a target="_blank" href="https://twitter.com/simonbeyzerov"><Icon name="twitter" height="60px" /></a></div>
+			<div  class="icon-img"><a target="_blank" href="https://www.linkedin.com/in/sim15"><Icon name="linkedin" aclass="icon-svg" /></a></div>
+			<div  class="icon-img"><a target="_blank" href="https://github.com/sim15/"><Icon name="github" aclass="icon-svg" /></a></div>
+			<div  class="icon-img"><a target="_blank" href="https://twitter.com/simonbeyzerov"><Icon name="twitter" aclass="icon-svg" /></a></div>
 		</div>
 
 		<div class="about-container">

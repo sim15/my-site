@@ -14,3 +14,19 @@ body {
 	font-size: .7em;
 	font-weight: 400;
 }
+
+.icon-svg {
+	height:60px;
+}
+
+svg * {
+	height: 100%;
+	/* fill:   blue; */
+}
+
+@media (max-width: 800px) {
+	.icon-svg {
+		height:40px;
+	}
+
+}
