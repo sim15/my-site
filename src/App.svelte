@@ -70,7 +70,7 @@
 
 	.contact-icons {
 		animation: floatUp .5s ease-out;
-		height: 5em;
+		/* height: 6em; */
 		margin: 4em 0;
 	}
 
