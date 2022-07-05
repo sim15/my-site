@@ -46,9 +46,9 @@ export default function Contact() {
         <ContactCol>
           <h2>Miscellaneous</h2>
           <ContactList>
-            <ContactLi><a target="_blank" href="https://www.linkedin.com/in/sim15/">LinkedIn</a></ContactLi>
-            <ContactLi><a target="_blank" href="https://github.com/sim15">GitHub</a></ContactLi>
-            <ContactLi><a target="_blank" href="https://scholar.google.com/citations?user=w08suY8AAAAJ&hl=en">Google Scholar</a></ContactLi>
+            <ContactLi><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sim15/">LinkedIn</a></ContactLi>
+            <ContactLi><a target="_blank" rel="noreferrer" href="https://github.com/sim15">GitHub</a></ContactLi>
+            <ContactLi><a target="_blank" rel="noreferrer" href="https://scholar.google.com/citations?user=w08suY8AAAAJ&hl=en">Google Scholar</a></ContactLi>
             
           </ContactList>
         </ContactCol>

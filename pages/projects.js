@@ -41,7 +41,7 @@ const ProjectItem = ({ title, children, notes=[], links=[] }) => (
       {
       links.map((item,index)=>(
         <Fragment key={item.title + toString(index)}>
-        <Link href={item.url} target="_blank">
+        <Link href={item.url} rel="noreferrer" target="_blank">
           <Button style={{height: '1.4rem', marginTop: ".4rem", fontSize: "0.8rem"}}
             auto rounded bordered
             >

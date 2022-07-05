@@ -154,9 +154,9 @@
 		<h2><span>svbeyzerov [at] wpi.edu</span></h2>
 
 		<div class="contact-icons">
-			<div  class="icon-img"><a target="_blank" href="https://www.linkedin.com/in/sim15"><Icon name="linkedin" aclass="icon-svg" /></a></div>
-			<div  class="icon-img"><a target="_blank" href="https://github.com/sim15/"><Icon name="github" aclass="icon-svg" /></a></div>
-			<div  class="icon-img"><a target="_blank" href="https://twitter.com/simonbeyzerov"><Icon name="twitter" aclass="icon-svg" /></a></div>
+			<div  class="icon-img"><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sim15"><Icon name="linkedin" aclass="icon-svg" /></a></div>
+			<div  class="icon-img"><a target="_blank" rel="noreferrer" href="https://github.com/sim15/"><Icon name="github" aclass="icon-svg" /></a></div>
+			<div  class="icon-img"><a target="_blank" rel="noreferrer" href="https://twitter.com/simonbeyzerov"><Icon name="twitter" aclass="icon-svg" /></a></div>
 		</div>
 
 		<div class="about-container">
