@@ -12,8 +12,8 @@ export default function Home() {
       </Head>
       <div>
         <p>
-          Hi! I'm Simon, a high school student curious about computer science and mathematics. 
-          I love making stuff and exploring new ideas; I'm particularly excited by projects that combine ideas to tackle real problems in a novel way. 
+          Hi! I&apos;m Simon, a high school student curious about computer science and mathematics. 
+          I love making stuff and exploring new ideas; I&apos;m particularly excited by projects that combine ideas to tackle real problems in a novel way. 
         </p>
         <p>
           My research interests lie primarily in cryptography and theoretical computer science. 
