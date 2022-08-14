@@ -10,6 +10,11 @@
     "svgr": "svgr icons -d components/icons --icon"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/lab": "^5.0.0-alpha.94",
+    "@mui/material": "^5.10.0",
     "@nextui-org/react": "^1.0.0-beta.8",
     "@react-aria/ssr": "^3.2.0",
     "@svgr/cli": "^6.2.1",

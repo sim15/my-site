@@ -14,3 +14,12 @@
     /* padding: .7rem 2rem; */
     margin: -.3rem 0;
   }
+
+.projectSectionCaption {
+    margin: 0;
+    padding: 0;
+}
+
+.collapseGroup {
+    padding: 0;
+}

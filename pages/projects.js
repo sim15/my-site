@@ -2,9 +2,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import LazyShow from "/components/LazyShow";
 import styled from 'styled-components';
+
 import { Award, Svg100Award, Medal } from '/components/icons/index'
 import { Tooltip, Button, Spacer, Collapse, Text, Grid, Link } from '@nextui-org/react';
-import styles from '../styles/Projects.module.css'
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+
+import stylesProject from '../styles/Projects.module.css';
+
+
+import TreeView from '@mui/lab/TreeView';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import TreeItem, { treeItemClasses } from '@mui/lab/TreeItem';
 
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
@@ -21,8 +30,8 @@ const NoteItem = ({ children, title, mainIcon }) => (
 
 const ProjectTitle = ({ children, notes }) => (
   <div
-  className={styles.hFlex}>
-      <Text weight="medium" className={styles.projectTitle}>
+  className={stylesProject.hFlex}>
+      <Text weight="medium" className={stylesProject.projectTitle}>
         {children}
       </Text>
     <div className="noteContainer" style={{ flex: "1", display: "inline-block"}}>
@@ -34,21 +43,21 @@ const ProjectTitle = ({ children, notes }) => (
 )
 
 const ProjectItem = ({ title, children, notes=[], links=[] }) => (
-  <div className={styles.projectItem}>
+  <div className={stylesProject.projectItem}>
     <ProjectTitle key={title} notes={notes}>{title}</ProjectTitle>
     {children}
-    <div className={styles.hFlex}>
+    <div className={stylesProject.hFlex}>
       {
       links.map((item,index)=>(
         <Fragment key={item.title + toString(index)}>
-        <Link href={item.url} rel="noreferrer" target="_blank">
-          <Button style={{height: '1.4rem', marginTop: ".4rem", fontSize: "0.8rem"}}
-            auto rounded bordered
-            >
-              {item.title}
-          </Button>
-        </Link>
-        <Spacer x={0.5}/>
+          <Link href={item.url} rel="noreferrer" target="_blank">
+            <Button style={{height: '1.4rem', marginTop: ".4rem", fontSize: "0.8rem"}}
+              auto rounded bordered
+              >
+                {item.title}
+            </Button>
+          </Link>
+          <Spacer x={0.5}/>
         </Fragment>
       ))
       }
@@ -93,6 +102,13 @@ const ProjectItemCollapse = ({title, children, notes, links }) => {
 }
 
 
+
+
+
+
+
+
+
 export default function Projects() {
   return (
     <>
@@ -103,9 +119,14 @@ export default function Projects() {
       </Head>
       <div>
         <h2>Research</h2>
-        <Grid.Container>
+        <p className={stylesProject.projectSectionCaption}>
+          For any substantial ongoing or completed research work, please see below. 
+          The availability of certain code repositories or papers may depend on the project's current status (e.g., 
+           the links associated with any project in the process of publication may be temporarily unavailble).
+        </p>
+        <Grid.Container gap={0}>
           <Grid>
-            <Collapse.Group splitted>
+            <Collapse.Group splitted css={{padding: 0}}>
               <ProjectItemCollapse 
                 title="Private Access Control for Function Secret Sharing" 
                 links={[{title: "Paper"}, {title: "Github"}]}>
@@ -125,7 +146,7 @@ export default function Projects() {
                 Independent research paper exploring how anonymous authentication techniques can be used to improve the current state of the art in anonymous communication systems with cryptographic privacy guarantees. 
               </ProjectItemCollapse>
 
-              <ProjectItemCollapse title="Seed-Homomorphic Pseudorandom Generators from Learning with Errors" 
+              <ProjectItemCollapse title="Seed-Homomorphic Pseudorandom Generators from Learning with Errors / Multi-Server Distributed Point Functions" 
               links={[]}
               >
                 (Still in the works!)
@@ -145,10 +166,12 @@ export default function Projects() {
       </div>
       <div>
       <h2>Other cool projects</h2>
-
+      <p className={stylesProject.projectSectionCaption}>
+          For any other interesting past projects or code resources, see below. 
+        </p>
       <Grid.Container>
           <Grid>
-            <Collapse.Group splitted>
+            <Collapse.Group splitted css={{padding: 0}}>
             <ProjectItemCollapse title="SigmaML" 
             links={[{title: "Github", url: "https://github.com/sim15/sigmaml"}]}
             >
@@ -165,7 +188,7 @@ export default function Projects() {
               Designed a physical aid for the independent navigation of public spaces for those with visual impairments. Designed software for automated guidance and designed a haptic device to aid those attempting to navigate through unadapted environments. Allows for independent parties to deploy schematics that aid individuals in the respective space.
             </ProjectItemCollapse>
             <ProjectItemCollapse title="IMMC 2022" 
-            notes={[{displayIcon: <Award/>, title: "", description: "Awarded US Regional Finalist"}]}
+            notes={[{displayIcon: <Award/>, title: "", description: "Awarded US Finalist"}]}
             links={[]}>
               Mathematical modeling paper written during a the 2022 International Mathematical Modeling Competition (IMMC). 
               Modeled planar loading and disembarking while optimizing both processes in a diverse set of aircrafts.
@@ -186,9 +209,43 @@ export default function Projects() {
             </Collapse.Group>
           </Grid>
         </Grid.Container>
+      </div>
 
-
-        
+      <div>
+      <h2>Mass Academy Coursework</h2>
+      <p className={stylesProject.projectSectionCaption}>
+          For prospective Mass Academy students, alumni, or for anyone interested: past assignments and projects completed 
+          during the 2021-22 school year are available upon request. Certain assignments will be available in the future.
+        </p>
+        {/* <TreeView
+          aria-label="file system navigator"
+          defaultCollapseIcon={<ExpandMoreIcon />}
+          defaultExpandIcon={<ChevronRightIcon />}
+          sx={{ height: 440, flexGrow: 1, overflowY: 'auto' }}
+        >
+          <TreeItem nodeId="1" label="Mathematics">
+            <TreeItem nodeId="2" label="Calendar" />
+          </TreeItem>
+          <TreeItem nodeId="3" label="Computer Science">
+            <TreeItem nodeId="4" label="Calendar" />
+          </TreeItem>
+          <TreeItem nodeId="5" label="Humanities">
+            <TreeItem nodeId="6" label="Essays" />
+            <TreeItem nodeId="13" label="Presentations/Misc." >
+              <TreeItem
+              label="Satire Video"/>
+            </TreeItem>
+          </TreeItem>
+          <TreeItem nodeId="7" label="Physics">
+            <TreeItem nodeId="8" label="Calendar" />
+          </TreeItem>
+          <TreeItem nodeId="9" label="Spanish">
+            <TreeItem nodeId="10" label="Calendar" />
+          </TreeItem>
+          <TreeItem nodeId="11" label="STEM">
+            <TreeItem nodeId="12" label="Calendar" />
+          </TreeItem>
+      </TreeView> */}
       </div>
     </>
   )

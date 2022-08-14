@@ -14,12 +14,13 @@ export default function CV() {
         <link rel="icon" href="/websiteicon.ico" />
       </Head>
       <h2>CV</h2>
-      <Button
+      <p>An up to date copy of my CV is available upon request. Feel free to contact me with any questions.</p>
+      {/* <Button
       auto rounded bordered style={{margin: "0 auto"}}
       icon={<Paper fill="currentColor"/>}
       >
         CV (Updated PDF)
-      </Button>
+      </Button> */}
     </>
   )
 }
