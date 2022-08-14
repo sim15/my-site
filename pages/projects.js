@@ -121,7 +121,7 @@ export default function Projects() {
         <h2>Research</h2>
         <p className={stylesProject.projectSectionCaption}>
           For any substantial ongoing or completed research work, please see below. 
-          The availability of certain code repositories or papers may depend on the project's current status (e.g., 
+          The availability of certain code repositories or papers may depend on the project&apos;s current status (e.g., 
            the links associated with any project in the process of publication may be temporarily unavailble).
         </p>
         <Grid.Container gap={0}>
