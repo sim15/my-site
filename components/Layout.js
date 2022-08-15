@@ -1,7 +1,8 @@
 import Navbar from "./Navbar";
 import styled from 'styled-components';
 import {motion} from 'framer-motion'
-
+import Image from 'next/image'
+import facePic from '../public/face.png'
 
 const ProfileImage = styled.div`
     height: 10rem;
@@ -24,7 +25,12 @@ export default function Layout({children}) {
             <div className="navWrapper">
             
                 <ProfileImage>
-                        <img src="/face.png" className="rounded" style={{height: "100%", width: "auto", color: "blue", margin: "0 auto", display: "inline"}}/>
+                    <Image
+                        src={facePic}
+                        alt="Picture of my face"
+                        className="rounded" css={{height: "100%", width: "auto", color: "blue", margin: "0 auto", display: "inline"}}
+                    />
+                        {/* <img src="/face.png" /> */}
                 </ProfileImage>
 
             <div>
