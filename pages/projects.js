@@ -121,7 +121,8 @@ export default function Projects() {
         <h2>Research</h2>
         <p className={stylesProject.projectSectionCaption}>
           For any substantial ongoing or completed research work, please see below. 
-          The availability of certain code repositories or papers may depend on the project&apos;s current status.
+          The availability of certain code repositories or papers may depend on the project&apos;s current status (e.g., 
+           the links associated with any project in the process of publication may be temporarily unavailble).
         </p>
         <Grid.Container gap={0}>
           <Grid>
@@ -216,7 +217,7 @@ export default function Projects() {
       <h2>Mass Academy Coursework</h2>
       <p className={stylesProject.projectSectionCaption}>
           For prospective Mass Academy students, alumni, or for anyone interested: past assignments and projects completed 
-          during the 2021-22 school year are available upon request. Certain assignments may be available in the future.
+          during the 2021-22 school year are available upon request. Certain assignments will be available in the future.
         </p>
         {/* <TreeView
           aria-label="file system navigator"

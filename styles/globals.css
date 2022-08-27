@@ -1,5 +1,5 @@
 html {
-  background: #fdfdfd;
+  background: #f3f5f987;
 }
 html,
 body {
@@ -9,7 +9,15 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+  html,
+  body {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+}
+
+@media (max-width: 1000px) {
   html,
   body {
     padding-left: 10%;
