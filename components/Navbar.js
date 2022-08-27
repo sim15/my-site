@@ -12,6 +12,7 @@ const Nav = styled.nav`
 
 const StyledLink = styled.a`
 text-decoration: none;
+font-size: 1.15rem;
     /* padding: 2rem 2rem; */
 `;
 

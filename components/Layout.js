@@ -28,6 +28,7 @@ export default function Layout({children}) {
                     <Image
                         src={facePic}
                         alt="Picture of my face"
+                        layout='fill'
                         className="rounded" css={{height: "100%", width: "auto", color: "blue", margin: "0 auto", display: "inline"}}
                     />
                         {/* <img src="/face.png" /> */}

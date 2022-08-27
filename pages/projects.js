@@ -121,27 +121,28 @@ export default function Projects() {
         <h2>Research</h2>
         <p className={stylesProject.projectSectionCaption}>
           For any substantial ongoing or completed research work, please see below. 
-          The availability of certain code repositories or papers may depend on the project&apos;s current status (e.g., 
-           the links associated with any project in the process of publication may be temporarily unavailble).
+          The availability of certain code repositories or papers may depend on the project&apos;s current status.
         </p>
         <Grid.Container gap={0}>
           <Grid>
             <Collapse.Group splitted css={{padding: 0}}>
               <ProjectItemCollapse 
                 title="Private Access Control for Function Secret Sharing" 
-                links={[{title: "Paper"}, {title: "Github"}]}>
+                // links={[{title: "Paper"}, {title: "Github"}]}
+                links={[]}
+                >
                   Written in conjunction with MIT PRIMES. Cryptography paper developing distributed zero knowledge proof protocols towards access control for secret-shared functions.
               </ProjectItemCollapse> 
 
 
               <ProjectItemCollapse title="Cloak: A Versatile Framework for Anonymous Authentication" 
-              links={[{title: "Paper"}, {title: "Github"}]}
+              links={[]}
               >
                 Written in conjunction with MIT PRIMES. Cryptography paper developing privacy preserving authentication through secret-shared zero-knowledge proof protocols.
               </ProjectItemCollapse>
 
               <ProjectItemCollapse title="Authenticated Metadata-hiding Anonymous Communication" 
-              links={[{title: "Paper"}, {title: "Github"}]}
+              links={[]}
               >
                 Independent research paper exploring how anonymous authentication techniques can be used to improve the current state of the art in anonymous communication systems with cryptographic privacy guarantees. 
               </ProjectItemCollapse>
@@ -215,7 +216,7 @@ export default function Projects() {
       <h2>Mass Academy Coursework</h2>
       <p className={stylesProject.projectSectionCaption}>
           For prospective Mass Academy students, alumni, or for anyone interested: past assignments and projects completed 
-          during the 2021-22 school year are available upon request. Certain assignments will be available in the future.
+          during the 2021-22 school year are available upon request. Certain assignments may be available in the future.
         </p>
         {/* <TreeView
           aria-label="file system navigator"

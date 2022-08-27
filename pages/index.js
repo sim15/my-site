@@ -12,15 +12,13 @@ export default function Home() {
       </Head>
       <div>
         <p>
-          Hi! I&apos;m Simon, a high school student curious about computer science and mathematics. 
-          I love making things, exploring new ideas, and am particularly excited by projects that combine ideas to tackle real problems in a novel way. 
+          Hi! I&apos;m Simon, a senior at the Massachusetts Academy of Math and Science at WPI.
+          I am broadly interested in mathematics and computer science, with my primary 
+          research interests lying in theoretical computer science and cryptography. 
+          See my projects for a more detailed description of my work.
         </p>
         <p>
-          My current research interests lie primarily in cryptography and theoretical computer science. 
-          Check out my projects for a more detailed description.
-        </p>
-        <p>
-          <b>Note:</b> This website is currently under construction!
+          
         </p>
       </div>
     </>
