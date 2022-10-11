@@ -1,13 +1,16 @@
 .hFlex {
     display: flex;
     flex-direction: row;
+    /* padding-top: 1em; */
+    /* padding: 0;
+    margin: 0; */
 }
 
 .projectTitle {
-    font-weight: bold;
+    font-weight: 300;
     padding: .2rem 0;
     display: inline;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .projectItem {

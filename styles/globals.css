@@ -1,5 +1,13 @@
+:root {
+  --main-dark:rgb(36, 36, 36);
+  --hover-dark:rgb(0, 0, 0);
+  --main-blue:rgb(0, 62, 205);
+  --hover-blue:rgb(1, 31, 101);
+}
+
 html {
   background: #f3f5f987;
+  color: var(--main-dark)
 }
 html,
 body {
@@ -41,8 +49,20 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: underline;
+  color: var(--main-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.282);
+  -webkit-transition : border 200ms ease-out;
+  -moz-transition : border 200ms ease-out;
+  -o-transition : border 200ms ease-out;
+  transition : border 200ms ease-out;
+}
+
+a:hover{
+  color: var(--hover-blue);
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom-color: rgba(0, 0, 0, 0);
 }
 
 * {
@@ -64,14 +84,20 @@ h1 {
 }
 
 h2 {
-  font-weight: 500;
-  font-size: 1.3rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 1.1rem 0;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1rem;
   margin: .5rem 0;
 }
 
 p {
-  font-weight: normal;
-  font-size: 1.2rem;
+  font-weight: 300;
+  font-size: 1rem;
   /* padding-left: 1rem; */
   margin-top: 0;
   line-height: 150%;
@@ -84,7 +110,7 @@ p {
 }
 
 .mainBody {
-  padding: 1rem 0;
+  padding: 0;
 }
 
 br {
@@ -113,3 +139,9 @@ br {
 .noteContainer {
   /* position: relative; */
 }
+
+.nextui-c-lfcDHB {
+  padding: 1rem 0 !important;
+}
+
+

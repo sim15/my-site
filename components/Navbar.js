@@ -12,7 +12,13 @@ const Nav = styled.nav`
 
 const StyledLink = styled.a`
 text-decoration: none;
+color: inherit;
 font-size: 1.15rem;
+border-bottom: none;
+&:hover {
+    text-decoration: none;
+    color: var(--hover-dark);
+    }
     /* padding: 2rem 2rem; */
 `;
 

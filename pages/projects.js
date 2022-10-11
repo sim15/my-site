@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import LazyShow from "/components/LazyShow";
 import styled from 'styled-components';
+import {MdKeyboardArrowRight} from 'react-icons/md'
 
 import { Award, Svg100Award, Medal } from '/components/icons/index'
 import { Tooltip, Button, Spacer, Collapse, Text, Grid, Link } from '@nextui-org/react';
@@ -19,6 +20,21 @@ import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import { useEffect, Fragment } from "react";
 
+
+const LinkButton = styled.a`
+    /* color: var(--main-blue);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--hover-blue);
+    } */
+`;
+
+const ColH2 = styled.h2`
+/* margin-bottom: 0; */
+`;
+
+
 const NoteItem = ({ children, title, mainIcon }) => (
   <>
       <Tooltip content={children} color="primary" style={{paddingLeft: ".3rem"}}>
@@ -31,7 +47,7 @@ const NoteItem = ({ children, title, mainIcon }) => (
 const ProjectTitle = ({ children, notes }) => (
   <div
   className={stylesProject.hFlex}>
-      <Text weight="medium" className={stylesProject.projectTitle}>
+      <Text className={stylesProject.projectTitle}>
         {children}
       </Text>
     <div className="noteContainer" style={{ flex: "1", display: "inline-block"}}>
@@ -42,26 +58,11 @@ const ProjectTitle = ({ children, notes }) => (
   </div>
 )
 
-const ProjectItem = ({ title, children, notes=[], links=[] }) => (
+const ProjectItem = ({ title, children, notes=[] }) => (
   <div className={stylesProject.projectItem}>
     <ProjectTitle key={title} notes={notes}>{title}</ProjectTitle>
     {children}
-    <div className={stylesProject.hFlex}>
-      {
-      links.map((item,index)=>(
-        <Fragment key={item.title + toString(index)}>
-          <Link href={item.url} rel="noreferrer" target="_blank">
-            <Button style={{height: '1.4rem', marginTop: ".4rem", fontSize: "0.8rem"}}
-              auto rounded bordered
-              >
-                {item.title}
-            </Button>
-          </Link>
-          <Spacer x={0.5}/>
-        </Fragment>
-      ))
-      }
-    </div>
+    
   </div>
 )
 
@@ -79,33 +80,53 @@ const ProjectItemCollapse = ({title, children, notes, links }) => {
     }
   }, [control, inView]);
 
-  return <LazyShow
+  return <Collapse
+  css={{padding: 0}}a
+  // arrowIcon={<MdKeyboardArrowRight/>}
+  title={
+    <ProjectItem
+      key={title}
+      title={title}
+      notes={notes}
       >
-        <Collapse
-          title={
-            <ProjectItem
-              key={title}
-              title={title}
-              notes={notes}
-              links={links}>
-            </ProjectItem>
-          }
-          shadow={true}
-          bordered={true}
-          >
-          <Text>
-            {children}
-          </Text>
-        </Collapse>
-      </LazyShow>
+    </ProjectItem>
+  }
+  // shadow={true}
+  // bordered={true}
+  >
+    
+  <Text>
+    {children}
+  </Text>
+  
+  <div className={stylesProject.hFlex}>
+      {
+      links.map((item,index)=>(
+        <Fragment key={item.title + toString(index)}>
+          {/* <button class="button-28" role="button">{item.title}</button> */}
+          <span>
+            [
+            {<LinkButton target="_blank" rel="noreferrer" href={item.url}>{item.title}</LinkButton>}
+            ]
+          </span>
+          {/* <Link  rel="noreferrer" target="_blank"> */}
+            {/* <Button style={{height: '1.4rem', marginTop: ".4rem", fontSize: "0.8rem"}}
+               auto
+              >
+                
+            </Button> */}
+          {/* </Link> */}
+          <Spacer x={0.5}/>
+        </Fragment>
+      ))
+      }
+    </div>
+  </Collapse>
+  // <LazyShow>
+        
+      {/* </LazyShow> */}
   
 }
-
-
-
-
-
-
 
 
 
@@ -118,20 +139,35 @@ export default function Projects() {
         <link rel="icon" href="/websiteicon.ico" />
       </Head>
       <div>
-        <h2>Research</h2>
-        <p className={stylesProject.projectSectionCaption}>
+        <ColH2>Cryptography</ColH2>
+        {/* <p className={stylesProject.projectSectionCaption}>
           For any substantial ongoing or completed research work, please see below. 
           The availability of certain code repositories or papers may depend on the project&apos;s current status (e.g., 
-           the links associated with any project in the process of publication may be temporarily unavailble).
-        </p>
-        <Grid.Container gap={0}>
+           the links associated with any project in the process of publication may be temporarily unavailable).
+        </p> */}
+        <Grid.Container>
           <Grid>
-            <Collapse.Group splitted css={{padding: 0}}>
+            <Collapse.Group 
+            // splitted 
+            // divider={true}
+            // shadow
+            css={{padding: 0}}
+            >
+              {/* <Collapse>
+              <Text>
+                ok
+              </Text>
+              </Collapse> */}
               <ProjectItemCollapse 
                 title="Private Access Control for Function Secret Sharing" 
                 // links={[{title: "Paper"}, {title: "Github"}]}
                 links={[]}
                 >
+                  <h3>Authors</h3>
+                  Sacha Servan-Schreiber, Simon Beyzerov, Eli Yablon, Hyojae Park
+
+                  <h3>About</h3>
+
                   Written in conjunction with MIT PRIMES. Cryptography paper developing distributed zero knowledge proof protocols towards access control for secret-shared functions.
               </ProjectItemCollapse> 
 
@@ -139,24 +175,36 @@ export default function Projects() {
               <ProjectItemCollapse title="Cloak: A Versatile Framework for Anonymous Authentication" 
               links={[]}
               >
+                <h3>Authors</h3>
+                  Sacha Servan-Schreiber, Simon Beyzerov, Eli Yablon
+
+                <h3>About</h3>
+
                 Written in conjunction with MIT PRIMES. Cryptography paper developing privacy preserving authentication through secret-shared zero-knowledge proof protocols.
               </ProjectItemCollapse>
 
               <ProjectItemCollapse title="Authenticated Metadata-hiding Anonymous Communication" 
               links={[]}
               >
+                <h3>Authors</h3>
+                  Simon Beyzerov
+
+                <h3>About</h3>
+
                 Independent research paper exploring how anonymous authentication techniques can be used to improve the current state of the art in anonymous communication systems with cryptographic privacy guarantees. 
               </ProjectItemCollapse>
 
               <ProjectItemCollapse title="Seed-Homomorphic Pseudorandom Generators from Learning with Errors / Multi-Server Distributed Point Functions" 
               links={[]}
               >
+                <h3>About</h3>
                 (Still in the works!)
               </ProjectItemCollapse>
 
               <ProjectItemCollapse title="Moderately Hard Functions" 
               links={[]}
               >
+                <h3>About</h3>
                 (Still in the works!)
               </ProjectItemCollapse>   
                 
@@ -167,46 +215,73 @@ export default function Projects() {
         
       </div>
       <div>
-      <h2>Other cool projects</h2>
-      <p className={stylesProject.projectSectionCaption}>
+      <ColH2>Mathematics</ColH2>
+      {/* <p className={stylesProject.projectSectionCaption}>
           For any other interesting past projects or code resources, see below. 
-        </p>
+        </p> */}
       <Grid.Container>
           <Grid>
-            <Collapse.Group splitted css={{padding: 0}}>
-            <ProjectItemCollapse title="SigmaML" 
-            links={[{title: "Github", url: "https://github.com/sim15/sigmaml"}]}
-            >
-              A cross-platform desktop application for building machine learning models, aggregating all steps of the development process. Built with web-based technology: JavaScript, Svelte, Electron, Python.
-            </ProjectItemCollapse>
-            <ProjectItemCollapse title="Mealgo: Recipe Filtering" 
-            links={[{title: "Poster", url: "/a4g_mealgo_poster.pdf"}, {title: "Github", url: "https://github.com/sim15/Mealgo3"}]}
-            >
-              Android application designed to provide intelligent meal and recipe recommendation that considers both pricing and individual user preferences. Developed with a tailored dataset of over 500,000 recipes and thousands of unique ingredients, all with their respective nutritional information. Developed in Kotlin.
-            </ProjectItemCollapse>
-            <ProjectItemCollapse title="NaVi: Aid for Independent Navigation for the Visually Impaired" 
-            links={[{title: "Poster", url: "/navi_poster.pdf"}]}
-            >
-              Designed a physical aid for the independent navigation of public spaces for those with visual impairments. Designed software for automated guidance and designed a haptic device to aid those attempting to navigate through unadapted environments. Allows for independent parties to deploy schematics that aid individuals in the respective space.
-            </ProjectItemCollapse>
+            <Collapse.Group
+            //  splitted
+             css={{padding: 0}}>
             <ProjectItemCollapse title="IMMC 2022" 
             notes={[{displayIcon: <Award/>, title: "", description: "Awarded US Finalist"}]}
             links={[]}>
+              <h3>About</h3>
               Mathematical modeling paper written during a the 2022 International Mathematical Modeling Competition (IMMC). 
               Modeled planar loading and disembarking while optimizing both processes in a diverse set of aircrafts.
             </ProjectItemCollapse>
             <ProjectItemCollapse title="HiMCM 2021" 
             notes={[{displayIcon: <Award/>, title: "", description: "Awarded Meritorious"}]}
             links={[{title: "Paper"}]}>
+              <h3>About</h3>
               Mathematical modeling paper written during the 2021-22 High School Mathematical Contest in Modeling (HiMCM).
               Modeled the causes, future outlook, and potential consequences of rapidly depleting water levels at Lake Mead, Nevada, the nations largest freshwater reservoir.
             </ProjectItemCollapse>
             <ProjectItemCollapse title="MathWorks 2022" 
             notes={[{displayIcon: <Award/>, title: "", description: "Advanced to Second Round of Competition (Top ~100 papers)"}]}
             links={[{title: "Paper"}]}>
+              <h3>About</h3>
                Mathematical modeling paper written during the 2022 MathWorks Mathematical Modeling Competition. 
                 Modeled changes in employment caused by a pandemic-induced virtual workplace. Considered future outlook, causes, and conducted a broader mathematical and social analysis.
             </ProjectItemCollapse>  
+                
+            </Collapse.Group>
+          </Grid>
+        </Grid.Container>
+      </div>
+      <div>
+      <ColH2>Coding and more</ColH2>
+      {/* <p className={stylesProject.projectSectionCaption}>
+          For any other interesting past projects or code resources, see below. 
+        </p> */}
+      <Grid.Container>
+          <Grid>
+            <Collapse.Group
+            //  splitted
+             css={{padding: 0}}>
+            <ProjectItemCollapse title="SigmaML" 
+            links={[{title: "Github", url: "https://github.com/sim15/sigmaml"}]}
+            >
+              <h3>Collaborators</h3>
+              Simon Beyzerov, Aaron Tian
+              <h3>About</h3>
+              A cross-platform desktop application for building machine learning models, aggregating all steps of the development process. Built with web-based technology: JavaScript, Svelte, Electron, Python.
+            </ProjectItemCollapse>
+            <ProjectItemCollapse title="Mealgo: Recipe Filtering" 
+            links={[{title: "Poster", url: "/a4g_mealgo_poster.pdf"}, {title: "Github", url: "https://github.com/sim15/Mealgo3"}]}
+            >
+
+              <h3>About</h3>
+              Android application designed to provide intelligent meal and recipe recommendation that considers both pricing and individual user preferences. Developed with a tailored dataset of over 500,000 recipes and thousands of unique ingredients, all with their respective nutritional information. Developed in Kotlin.
+            </ProjectItemCollapse>
+            <ProjectItemCollapse title="NaVi: Aid for Independent Navigation for the Visually Impaired" 
+            links={[{title: "Poster", url: "/navi_poster.pdf"}]}
+            >
+
+              <h3>About</h3>
+              Designed a physical aid for the independent navigation of public spaces for those with visual impairments. Designed software for automated guidance and designed a haptic device to aid those attempting to navigate through unadapted environments. Allows for independent parties to deploy schematics that aid individuals in the respective space.
+            </ProjectItemCollapse>
                 
             </Collapse.Group>
           </Grid>
