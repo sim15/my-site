@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components';
+import Link from 'next/link';
 import { Popover, Button, Text } from "@nextui-org/react";
 import catPic from '../public/cat.jpg';
 import saxophone from '../public/simonPlayingSax.png';
@@ -38,7 +39,7 @@ export default function Home() {
       <div>
         <h2>About me</h2>
         <p>
-          Hi! I&apos;m Simon, a senior at the <a target="_blank" href="https://www.massacademy.org/">Massachusetts Academy of Math and Science at WPI</a>.
+          Hi! I&apos;m Simon, a senior at the <a target="_blank" rel="noreferrer" href="https://www.massacademy.org/">Massachusetts Academy of Math and Science at WPI</a>.
         </p>
         <p>
           I&apos;m broadly interested in mathematics and computer science, with my primary research interests lying in theoretical computer science and cryptography. 
@@ -70,13 +71,13 @@ export default function Home() {
           explorations have been in research; 
           I&apos;ve been primarily working on on projects in cryptography and theoretical computer science in conjunction
           with 
-          the <a target="_blank" href="https://primes.mit.edu/">MIT PRIMES</a> program and under the 
-          mentorship of <a target="_blank" href="https://sachaservanschreiber.com/">Sacha Servan-Schreiber</a> @ <a target="_blank" href="https://www.csail.mit.edu/">MIT CSAIL</a>.
+          the <a target="_blank" rel="noreferrer" href="https://primes.mit.edu/">MIT PRIMES</a> program and under the 
+          mentorship of <a target="_blank" rel="noreferrer" href="https://sachaservanschreiber.com/">Sacha Servan-Schreiber</a> @ <a target="_blank" rel="noreferrer" href="https://www.csail.mit.edu/">MIT CSAIL</a>.
           
           </p>
 
           <p>
-            For more details on my work in crypto or in other areas, please see my <a href="/projects">projects</a>. 
+            For more details on my work in crypto or in other areas, please see my <Link href="/projects">projects</Link>. 
           </p>
       </div>
     </>
