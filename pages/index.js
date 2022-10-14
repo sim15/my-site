@@ -17,8 +17,8 @@ const PopImg = styled.div`
 const TextPopover = ({textContent, children}) => {
   return <Tooltip content={<PopImg>
       {children}
-    </PopImg>} shadow={true} css={{display: 'inline'}}>
-            <p css={{display: 'inline'}}><a>{textContent.toString()}</a></p>
+    </PopImg>} shadow={true} style={{display: 'inline'}}>
+            <p style={{display: 'inline'}}><a>{textContent.toString()}</a></p>
     </Tooltip>
 } 
 
@@ -39,7 +39,7 @@ export default function Home() {
           I&apos;m broadly interested in mathematics and computer science, with my primary research interests lying in theoretical computer science and cryptography. 
           In general, I am most excited by problems at the intersection of theory and practice.
         </p>
-        <p  css={{display: 'inline'}}>
+        <p  style={{display: 'inline'}}>
           Outside of CS and Math, you may find me petting my&nbsp;
           </p>
           <TextPopover textContent={"cat"}>
@@ -48,7 +48,7 @@ export default function Home() {
                 alt="Picture of my cat"
             />
           </TextPopover>
-          <p  css={{display: 'inline'}}>,
+          <p  style={{display: 'inline'}}>,
           making movies, playing minesweeper/football/
           </p>
           <TextPopover textContent={"my saxophone"}>
@@ -57,7 +57,7 @@ export default function Home() {
                 alt="Picture of me playing the saxophone"
             />
           </TextPopover>
-          <p css={{display: 'inline'}} >
+          <p style={{display: 'inline'}} >
           , listening to the same three songs on loop, or walking on my hands.
         </p>
         
