@@ -81,22 +81,17 @@ const Navbar = () => {
             <SelectionBar routerPath={router.pathname}></SelectionBar>
             <Nav>
 
-            {navTabs.map((item,index)=>{
+                {navTabs.map((item,index)=>{
 
-            return <ListItem key={item.title} className="list-class" isActive={router.pathname == item.path}>
-                <Link href={item.path} passHref>
-                    <StyledLink>{item.title}</StyledLink>
-                </Link>
-            </ListItem>
+                return <ListItem key={item.title} className="list-class" isActive={router.pathname == item.path}>
+                    <Link href={item.path} passHref>
+                        <StyledLink>{item.title}</StyledLink>
+                    </Link>
+                </ListItem>
 
-            })}
-            
-            {/* <ListItem className="list-class" isActive={router.pathname == "/contact"}>
-                <Link href="/contact" passHref>
-                    <StyledLink>Contact</StyledLink>
-                </Link>
-            </ListItem> */}
-        </Nav>
+                })}
+        
+            </Nav>
         
         </div>
     )

@@ -62,8 +62,6 @@ allVars.slidePrimary = allVars.slideRight;
 allVars.slideSecondary = allVars.slideRight;
 
 function MyApp({ Component, pageProps, router }) {
-  // const [animation, cycleAnimation] = useCycle("slideLeft", "slideRight")
-  // console.log(animation)
   
 
   const currentAnimation = (r, opening) => {
@@ -115,9 +113,7 @@ function MyApp({ Component, pageProps, router }) {
           key={router.route} 
           initial={currentAnimation(router, true)} 
           exit={currentAnimation(router, false)} 
-          // exit="exitFade" 
           animate="pageAnimate"
-          // onAnimationComplete={}
           variants={allVars}
           transition={{ type: "tween", ease: "easeOut", duration: 0.4}}>
 

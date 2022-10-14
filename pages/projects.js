@@ -95,9 +95,9 @@ const ProjectItemCollapse = ({title, children, notes, links }) => {
   // bordered={true}
   >
     
-  <Text>
+  <div>
     {children}
-  </Text>
+  </div>
   
   <div className={stylesProject.hFlex}>
       {
@@ -140,35 +140,22 @@ export default function Projects() {
       </Head>
       <div>
         <ColH2>Cryptography</ColH2>
-        {/* <p className={stylesProject.projectSectionCaption}>
-          For any substantial ongoing or completed research work, please see below. 
-          The availability of certain code repositories or papers may depend on the project&apos;s current status (e.g., 
-           the links associated with any project in the process of publication may be temporarily unavailable).
-        </p> */}
-        <Grid.Container>
+        <Grid.Container css={{paddingLeft: '0.5rem'}}>
           <Grid>
             <Collapse.Group 
-            // splitted 
-            // divider={true}
-            // shadow
             css={{padding: 0}}
             >
-              {/* <Collapse>
-              <Text>
-                ok
-              </Text>
-              </Collapse> */}
               <ProjectItemCollapse 
                 title="Private Access Control for Function Secret Sharing" 
-                // links={[{title: "Paper"}, {title: "Github"}]}
                 links={[]}
                 >
                   <h3>Authors</h3>
-                  Sacha Servan-Schreiber, Simon Beyzerov, Eli Yablon, Hyojae Park
+
+                  <p>Sacha Servan-Schreiber, Simon Beyzerov, Eli Yablon, Hyojae Park</p>
 
                   <h3>About</h3>
 
-                  Written in conjunction with MIT PRIMES. Cryptography paper developing distributed zero knowledge proof protocols towards access control for secret-shared functions.
+                  <p>Written in conjunction with MIT PRIMES. Cryptography paper developing distributed zero knowledge proof protocols towards access control for secret-shared functions.</p>
               </ProjectItemCollapse> 
 
 
@@ -180,7 +167,7 @@ export default function Projects() {
 
                 <h3>About</h3>
 
-                Written in conjunction with MIT PRIMES. Cryptography paper developing privacy preserving authentication through secret-shared zero-knowledge proof protocols.
+                <p>Written in conjunction with MIT PRIMES. Cryptography paper developing privacy preserving authentication through secret-shared zero-knowledge proof protocols.</p>
               </ProjectItemCollapse>
 
               <ProjectItemCollapse title="Authenticated Metadata-hiding Anonymous Communication" 
@@ -191,21 +178,21 @@ export default function Projects() {
 
                 <h3>About</h3>
 
-                Independent research paper exploring how anonymous authentication techniques can be used to improve the current state of the art in anonymous communication systems with cryptographic privacy guarantees. 
+                <p>Independent research paper exploring how anonymous authentication techniques can be used to improve the current state of the art in anonymous communication systems with cryptographic privacy guarantees. </p>
               </ProjectItemCollapse>
 
               <ProjectItemCollapse title="Seed-Homomorphic Pseudorandom Generators from Learning with Errors / Multi-Server Distributed Point Functions" 
               links={[]}
               >
                 <h3>About</h3>
-                (Still in the works!)
+                <p>(Still in the works!)</p>
               </ProjectItemCollapse>
 
               <ProjectItemCollapse title="Moderately Hard Functions" 
               links={[]}
               >
                 <h3>About</h3>
-                (Still in the works!)
+                <p>(Still in the works!)</p>
               </ProjectItemCollapse>   
                 
             </Collapse.Group>
@@ -216,10 +203,7 @@ export default function Projects() {
       </div>
       <div>
       <ColH2>Mathematics</ColH2>
-      {/* <p className={stylesProject.projectSectionCaption}>
-          For any other interesting past projects or code resources, see below. 
-        </p> */}
-      <Grid.Container>
+      <Grid.Container css={{paddingLeft: '0.5rem'}}>
           <Grid>
             <Collapse.Group
             //  splitted
@@ -228,22 +212,22 @@ export default function Projects() {
             notes={[{displayIcon: <Award/>, title: "", description: "Awarded US Finalist"}]}
             links={[]}>
               <h3>About</h3>
-              Mathematical modeling paper written during a the 2022 International Mathematical Modeling Competition (IMMC). 
-              Modeled planar loading and disembarking while optimizing both processes in a diverse set of aircrafts.
+              <p>Mathematical modeling paper written during a the 2022 International Mathematical Modeling Competition (IMMC). 
+              Modeled planar loading and disembarking while optimizing both processes in a diverse set of aircrafts.</p>
             </ProjectItemCollapse>
             <ProjectItemCollapse title="HiMCM 2021" 
             notes={[{displayIcon: <Award/>, title: "", description: "Awarded Meritorious"}]}
             links={[{title: "Paper"}]}>
               <h3>About</h3>
-              Mathematical modeling paper written during the 2021-22 High School Mathematical Contest in Modeling (HiMCM).
-              Modeled the causes, future outlook, and potential consequences of rapidly depleting water levels at Lake Mead, Nevada, the nations largest freshwater reservoir.
+              <p>Mathematical modeling paper written during the 2021-22 High School Mathematical Contest in Modeling (HiMCM).
+              Modeled the causes, future outlook, and potential consequences of rapidly depleting water levels at Lake Mead, Nevada, the nations largest freshwater reservoir.</p>
             </ProjectItemCollapse>
             <ProjectItemCollapse title="MathWorks 2022" 
             notes={[{displayIcon: <Award/>, title: "", description: "Advanced to Second Round of Competition (Top ~100 papers)"}]}
             links={[{title: "Paper"}]}>
               <h3>About</h3>
-               Mathematical modeling paper written during the 2022 MathWorks Mathematical Modeling Competition. 
-                Modeled changes in employment caused by a pandemic-induced virtual workplace. Considered future outlook, causes, and conducted a broader mathematical and social analysis.
+              <p>Mathematical modeling paper written during the 2022 MathWorks Mathematical Modeling Competition. 
+                Modeled changes in employment caused by a pandemic-induced virtual workplace. Considered future outlook, causes, and conducted a broader mathematical and social analysis.</p>
             </ProjectItemCollapse>  
                 
             </Collapse.Group>
@@ -252,10 +236,7 @@ export default function Projects() {
       </div>
       <div>
       <ColH2>Coding and more</ColH2>
-      {/* <p className={stylesProject.projectSectionCaption}>
-          For any other interesting past projects or code resources, see below. 
-        </p> */}
-      <Grid.Container>
+      <Grid.Container css={{paddingLeft: '0.5rem'}}>
           <Grid>
             <Collapse.Group
             //  splitted
@@ -264,23 +245,23 @@ export default function Projects() {
             links={[{title: "Github", url: "https://github.com/sim15/sigmaml"}]}
             >
               <h3>Collaborators</h3>
-              Simon Beyzerov, Aaron Tian
+              <p>Simon Beyzerov, Aaron Tian</p>
               <h3>About</h3>
-              A cross-platform desktop application for building machine learning models, aggregating all steps of the development process. Built with web-based technology: JavaScript, Svelte, Electron, Python.
+              <p>A cross-platform desktop application for building machine learning models, aggregating all steps of the development process. Built with web-based technology: JavaScript, Svelte, Electron, Python.</p>
             </ProjectItemCollapse>
             <ProjectItemCollapse title="Mealgo: Recipe Filtering" 
             links={[{title: "Poster", url: "/a4g_mealgo_poster.pdf"}, {title: "Github", url: "https://github.com/sim15/Mealgo3"}]}
             >
 
               <h3>About</h3>
-              Android application designed to provide intelligent meal and recipe recommendation that considers both pricing and individual user preferences. Developed with a tailored dataset of over 500,000 recipes and thousands of unique ingredients, all with their respective nutritional information. Developed in Kotlin.
+              <p>Android application designed to provide intelligent meal and recipe recommendation that considers both pricing and individual user preferences. Developed with a tailored dataset of over 500,000 recipes and thousands of unique ingredients, all with their respective nutritional information. Developed in Kotlin.</p>
             </ProjectItemCollapse>
             <ProjectItemCollapse title="NaVi: Aid for Independent Navigation for the Visually Impaired" 
             links={[{title: "Poster", url: "/navi_poster.pdf"}]}
             >
 
               <h3>About</h3>
-              Designed a physical aid for the independent navigation of public spaces for those with visual impairments. Designed software for automated guidance and designed a haptic device to aid those attempting to navigate through unadapted environments. Allows for independent parties to deploy schematics that aid individuals in the respective space.
+              <p>Designed a physical aid for the independent navigation of public spaces for those with visual impairments. Designed software for automated guidance and designed a haptic device to aid those attempting to navigate through unadapted environments. Allows for independent parties to deploy schematics that aid individuals in the respective space.</p>
             </ProjectItemCollapse>
                 
             </Collapse.Group>
