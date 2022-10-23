@@ -1,7 +1,7 @@
-import { motion, useAnimation } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
 
-function useOnScreen(ref, rootMargin = "0px") {
+function useOnScreen(ref, rootMargin = '0px') {
   // State and setter for storing whether element is visible
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -39,7 +39,7 @@ const LazyShow = ({ children }) => {
         opacity: 1,
         transition: {
           duration: 0.5,
-          ease: "easeOut"
+          ease: 'easeOut'
         }
       });
     }
@@ -48,9 +48,8 @@ const LazyShow = ({ children }) => {
     <motion.div
       className="lazy-div"
       ref={rootRef}
-      initial={{ opacity: 0, y: "4rem" }}
-      animate={controls}
-    >
+      initial={{ opacity: 0, y: '4rem' }}
+      animate={controls}>
       {children}
     </motion.div>
   );

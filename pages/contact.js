@@ -1,9 +1,6 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
 import styled from 'styled-components';
-
-
-
 
 const ContactColumns = styled.div`
   display: flex;
@@ -21,7 +18,7 @@ const ContactList = styled.ul`
 `;
 
 const ContactLi = styled.li`
-  padding: .7rem 0;
+  padding: 0.7rem 0;
 `;
 
 export default function Contact() {
@@ -34,7 +31,6 @@ export default function Contact() {
       </Head>
 
       <ContactColumns>
-
         <ContactCol>
           <h2>Contact</h2>
           <ContactList>
@@ -46,10 +42,24 @@ export default function Contact() {
         <ContactCol>
           <h2>Miscellaneous</h2>
           <ContactList>
-            <ContactLi><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sim15/">LinkedIn</a></ContactLi>
-            <ContactLi><a target="_blank" rel="noreferrer" href="https://github.com/sim15">GitHub</a></ContactLi>
-            <ContactLi><a target="_blank" rel="noreferrer" href="https://scholar.google.com/citations?user=w08suY8AAAAJ&hl=en">Google Scholar</a></ContactLi>
-            
+            <ContactLi>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sim15/">
+                LinkedIn
+              </a>
+            </ContactLi>
+            <ContactLi>
+              <a target="_blank" rel="noreferrer" href="https://github.com/sim15">
+                GitHub
+              </a>
+            </ContactLi>
+            <ContactLi>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://scholar.google.com/citations?user=w08suY8AAAAJ&hl=en">
+                Google Scholar
+              </a>
+            </ContactLi>
           </ContactList>
         </ContactCol>
 
@@ -64,8 +74,7 @@ export default function Contact() {
             
           </ContactList>
         </ContactCol> */}
-
       </ContactColumns>
     </>
-  )
+  );
 }

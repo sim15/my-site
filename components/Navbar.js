@@ -3,98 +3,86 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
 const Nav = styled.nav`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
-
-
 
 const StyledLink = styled.a`
-text-decoration: none;
-color: inherit;
-font-size: 1.15rem;
-border-bottom: none;
-&:hover {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.15rem;
+  border-bottom: none;
+  &:hover {
     text-decoration: none;
     color: var(--hover-dark);
-    }
-    /* padding: 2rem 2rem; */
+  }
+  /* padding: 2rem 2rem; */
 `;
 
-const NavbarItem = 
-    styled.div`
-    flex: 1;
-    text-align: center;
-    padding: 1rem 0rem;
-    color: #B0B0B0;
-    border-bottom: 2px solid #B0B0B0;
+const NavbarItem = styled.div`
+  flex: 1;
+  text-align: center;
+  padding: 1rem 0rem;
+  color: #b0b0b0;
+  border-bottom: 2px solid #b0b0b0;
 `;
 
-const ListItem = ({ className, children, isActive }) => (
-    isActive ? 
-        <ActiveListItem className={className}>
-        {children}
-        </ActiveListItem>
-     : 
-        <NavbarItem className={className}>
-        {children}
-        </NavbarItem>
-);
-
+const ListItem = ({ className, children, isActive }) =>
+  isActive ? (
+    <ActiveListItem className={className}>{children}</ActiveListItem>
+  ) : (
+    <NavbarItem className={className}>{children}</NavbarItem>
+  );
 
 const ActiveListItem = styled(NavbarItem)`
-    color: black;
+  color: black;
 `;
-
-
-
 
 let navTabs = require('../pages/pages-tree.json');
 
-
 const findActiveIndex = (routePath) => {
-    for (let i = 0; i < navTabs.length; i++) {
-        if (navTabs[i].path == routePath) {
-            return i;
-        }
+  for (let i = 0; i < navTabs.length; i++) {
+    if (navTabs[i].path == routePath) {
+      return i;
     }
-    return -1;
-}
+  }
+  return -1;
+};
 
 const SelectionBar = styled.div`
-    height: 2px;
-    width: ${100 / navTabs.length}%;
-    background: black;
-    /* top: 100%; */
-    position:absolute;
-    left: ${props => (findActiveIndex(props.routerPath) * (100 / navTabs.length))}%;
-    bottom: 0px;
-    transition: 1000ms ease;
-    border-radius: 2px;
+  height: 2px;
+  width: ${100 / navTabs.length}%;
+  background: black;
+  /* top: 100%; */
+  position: absolute;
+  left: ${(props) => findActiveIndex(props.routerPath) * (100 / navTabs.length)}%;
+  bottom: 0px;
+  transition: 1000ms ease;
+  border-radius: 2px;
 `;
 
 const Navbar = () => {
-    const router = useRouter();
-    return (
-        <div style={{position:"relative", width: "100%"}}>
-            <SelectionBar routerPath={router.pathname}></SelectionBar>
-            <Nav>
+  const router = useRouter();
+  return (
+    <div style={{ position: 'relative', width: '100%' }}>
+      <SelectionBar routerPath={router.pathname}></SelectionBar>
+      <Nav>
+        {navTabs.map((item, index) => {
+          return (
+            <ListItem
+              key={item.title}
+              className="list-class"
+              isActive={router.pathname == item.path}>
+              <Link href={item.path} passHref>
+                <StyledLink>{item.title}</StyledLink>
+              </Link>
+            </ListItem>
+          );
+        })}
+      </Nav>
+    </div>
+  );
+};
 
-                {navTabs.map((item,index)=>{
-
-                return <ListItem key={item.title} className="list-class" isActive={router.pathname == item.path}>
-                    <Link href={item.path} passHref>
-                        <StyledLink>{item.title}</StyledLink>
-                    </Link>
-                </ListItem>
-
-                })}
-        
-            </Nav>
-        
-        </div>
-    )
-}
-
-export default Navbar
+export default Navbar;

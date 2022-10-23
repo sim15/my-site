@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "svgr": "svgr icons -d components/icons --icon"
+    "svgr": "svgr icons -d components/icons --icon",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -25,11 +27,16 @@
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
     "react-intersection-observer": "^9.2.2",
+    "react-latex-next": "^2.2.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6"
+    "eslint": "^8.26.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "prettier": "^2.7.1"
   }
 }

@@ -1,28 +1,28 @@
 .hFlex {
-    display: flex;
-    flex-direction: row;
-    /* padding-top: 1em; */
-    /* padding: 0;
+  display: flex;
+  flex-direction: row;
+  /* padding-top: 1em; */
+  /* padding: 0;
     margin: 0; */
 }
 
 .projectTitle {
-    font-weight: 300;
-    padding: .2rem 0;
-    display: inline;
-    font-size: 1rem;
+  font-weight: 300;
+  padding: 0.2rem 0;
+  display: inline;
+  font-size: 1rem;
 }
 
 .projectItem {
-    /* padding: .7rem 2rem; */
-    margin: -.3rem 0;
-  }
+  /* padding: .7rem 2rem; */
+  margin: -0.3rem 0;
+}
 
 .projectSectionCaption {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .collapseGroup {
-    padding: 0;
+  padding: 0;
 }

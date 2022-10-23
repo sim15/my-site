@@ -1,9 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
 import { Button } from '@nextui-org/react';
 import styled from 'styled-components';
-import { Paper } from '/components/icons/index'
-
+import { Paper } from '/components/icons/index';
 
 export default function CV() {
   return (
@@ -14,7 +13,10 @@ export default function CV() {
         <link rel="icon" href="/websiteicon.ico" />
       </Head>
       <h2>CV</h2>
-      <p>An up-to-date copy of my CV is available upon request. Please feel free to contact me with any questions.</p>
+      <p>
+        An up-to-date copy of my CV is available upon request. Please feel free to contact me with
+        any questions.
+      </p>
     </>
-  )
+  );
 }
