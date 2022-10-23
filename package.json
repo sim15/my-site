@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "svgr": "svgr icons -d components/icons --icon",
-    "lint": "eslint .",
+    "lint": "next lint",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
