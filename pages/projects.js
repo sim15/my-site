@@ -136,12 +136,20 @@ export default function Projects() {
               <ProjectItemCollapse
                 title="Private Access Control for Function Secret Sharing"
                 links={[]}
+                notes={[
+                  {
+                    displayIcon: <Award />,
+                    title: '',
+                    description:
+                      'Awarded Bronze Medal at S.T.-Yau North America',
+                  },
+                ]}
               >
                 <h3>Authors</h3>
 
                 <p>
-                  Sacha Servan-Schreiber, Simon Beyzerov, Eli Yablon, Hyojae
-                  Park
+                  Sacha Servan-Schreiber, <u>Simon Beyzerov</u>, Eli Yablon,
+                  Hyojae Park
                 </p>
 
                 <h3>About</h3>
@@ -173,7 +181,10 @@ export default function Projects() {
                 ]}
               >
                 <h3>Authors</h3>
-                Sacha Servan-Schreiber, Simon Beyzerov, Eli Yablon
+                <p>
+                  Sacha Servan-Schreiber, <u>Simon Beyzerov</u>, Eli Yablon
+                </p>
+
                 <h3>About</h3>
                 <p>
                   <Latex>
@@ -201,7 +212,7 @@ export default function Projects() {
                 links={[]}
               >
                 <h3>Authors</h3>
-                Simon Beyzerov
+                <p>Simon Beyzerov</p>
                 <h3>About</h3>
                 <p>
                   <Latex>
@@ -221,6 +232,18 @@ export default function Projects() {
                     cryptographic privacy guarantees.
                   </Latex>
                 </p>
+              </ProjectItemCollapse>
+
+              <ProjectItemCollapse
+                title="Authenticated Single-Server Private Aggregation"
+                links={[]}
+              >
+                <h3>Authors</h3>
+                <p>
+                  Sacha Servan-Schreiber, Mayuri Sridhar, <u>Simon Beyzerov</u>
+                </p>
+                <h3>About</h3>
+                <p>(Still in the works!)</p>
               </ProjectItemCollapse>
 
               <ProjectItemCollapse
@@ -266,6 +289,15 @@ export default function Projects() {
                   International Mathematical Modeling Competition (IMMC).
                   Modeled planar loading and disembarking while optimizing both
                   processes in a diverse set of aircrafts.
+                </p>
+              </ProjectItemCollapse>
+              <ProjectItemCollapse title="HiMCM 2022" links={[]}>
+                <h3>About</h3>
+                <p>
+                  Mathematical modeling paper written during the 2022-23 High
+                  School Mathematical Contest in Modeling (HiMCM). Modeled the
+                  causes and impact of colony collapse disorder on honeybee
+                  populations. (currently in the process of submission)
                 </p>
               </ProjectItemCollapse>
               <ProjectItemCollapse
@@ -328,7 +360,9 @@ export default function Projects() {
                 ]}
               >
                 <h3>Collaborators</h3>
-                <p>Simon Beyzerov, Aaron Tian</p>
+                <p>
+                  <u>Simon Beyzerov</u>, Aaron Tian
+                </p>
                 <h3>About</h3>
                 <p>
                   A cross-platform desktop application for building machine
