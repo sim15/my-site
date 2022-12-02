@@ -105,8 +105,8 @@ export default function Home() {
         <ul>
           <li>
             <p>
-              11/2022: Our paper "Private Access Control for Function Secret
-              Sharing" has been accepted to S&P2023!
+              11/2022: Our paper &quot;Private Access Control for Function
+              Secret Sharing&quot; has been accepted to S&P2023!
             </p>
           </li>
           <li>
