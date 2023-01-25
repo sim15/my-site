@@ -52,7 +52,7 @@ export default function Home() {
           I&apos;m broadly interested in mathematics and computer science, with
           my primary research interests lying in theoretical computer science
           and cryptography. In general, I am most excited by problems at the
-          intersection of theory and practice!
+          intersection of theory and practice.
         </p>
         <p style={{ display: 'inline' }}>
           Outside of CS and Math, you may find me petting my&nbsp;
@@ -74,10 +74,9 @@ export default function Home() {
 
         <p>
           Over the past few years, I&apos;ve been excited to use research to
-          explore the fascinating connections between mathematics and computer
-          science. Along with various other ventures, I&apos;ve been working on
-          projects in cryptography and theoretical computer science in
-          conjunction with the{' '}
+          explore connections between mathematics and computer science. Along
+          with other ventures, I&apos;ve been working on projects in
+          cryptography and theoretical computer science in conjunction with the{' '}
           <a target="_blank" rel="noreferrer" href="https://primes.mit.edu/">
             MIT PRIMES
           </a>{' '}

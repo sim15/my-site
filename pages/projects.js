@@ -92,7 +92,7 @@ const ProjectItemCollapse = ({ title, children, notes, links }) => {
     >
       <div>{children}</div>
 
-      <div className={stylesProject.hFlex}>
+      <div className={stylesProject.hFlex} style={{ paddingTop: '0.2em' }}>
         {links.map((item, index) => (
           <Fragment key={item.title + toString(index)}>
             {/* <button class="button-28" role="button">{item.title}</button> */}
@@ -135,7 +135,20 @@ export default function Projects() {
             <Collapse.Group css={{ padding: 0 }}>
               <ProjectItemCollapse
                 title="Private Access Control for Function Secret Sharing"
-                links={[]}
+                links={[
+                  {
+                    title: 'Paper (full version)',
+                    url: 'https://eprint.iacr.org/2022/1707',
+                  },
+                  {
+                    title: 'Slides',
+                    url: 'https://sachaservanschreiber.com/slides/pacls.pdf',
+                  },
+                  {
+                    title: 'Code',
+                    url: 'https://github.com/sachaservan/pacl',
+                  },
+                ]}
                 notes={[
                   {
                     displayIcon: <Award />,
@@ -150,6 +163,14 @@ export default function Projects() {
                 <p>
                   Sacha Servan-Schreiber, <u>Simon Beyzerov</u>, Eli Yablon,
                   Hyojae Park
+                </p>
+
+                <h3>Publications/Talks</h3>
+                <p>
+                  <em>
+                    IEEE Symposium on Security and Privacy (Oakland) 2023 (to
+                    appear), AMS-PME at the Joint Mathematics Meeting (JMM 2023)
+                  </em>
                 </p>
 
                 <h3>About</h3>
@@ -209,7 +230,9 @@ export default function Projects() {
 
               <ProjectItemCollapse
                 title="Authenticated Metadata-hiding Anonymous Communication"
-                links={[]}
+                links={[
+                  { title: 'Code', url: 'https://github.com/sim15/anon-com' },
+                ]}
               >
                 <h3>Authors</h3>
                 <p>Simon Beyzerov</p>
@@ -356,6 +379,7 @@ export default function Projects() {
               <ProjectItemCollapse
                 title="SigmaML"
                 links={[
+                  { title: 'Slides', url: '/sigmaml_slides.pdf' },
                   { title: 'Github', url: 'https://github.com/sim15/sigmaml' },
                 ]}
               >
@@ -407,7 +431,7 @@ export default function Projects() {
         </Grid.Container>
       </div>
 
-      <div>
+      {/* <div>
         <h2>Mass Academy Coursework</h2>
         <p className={stylesProject.projectSectionCaption}>
           For prospective Mass Academy students, alumni, or for anyone
@@ -415,36 +439,7 @@ export default function Projects() {
           school year are available upon request. Certain assignments will be
           available in the future.
         </p>
-        {/* <TreeView
-          aria-label="file system navigator"
-          defaultCollapseIcon={<ExpandMoreIcon />}
-          defaultExpandIcon={<ChevronRightIcon />}
-          sx={{ height: 440, flexGrow: 1, overflowY: 'auto' }}
-        >
-          <TreeItem nodeId="1" label="Mathematics">
-            <TreeItem nodeId="2" label="Calendar" />
-          </TreeItem>
-          <TreeItem nodeId="3" label="Computer Science">
-            <TreeItem nodeId="4" label="Calendar" />
-          </TreeItem>
-          <TreeItem nodeId="5" label="Humanities">
-            <TreeItem nodeId="6" label="Essays" />
-            <TreeItem nodeId="13" label="Presentations/Misc." >
-              <TreeItem
-              label="Satire Video"/>
-            </TreeItem>
-          </TreeItem>
-          <TreeItem nodeId="7" label="Physics">
-            <TreeItem nodeId="8" label="Calendar" />
-          </TreeItem>
-          <TreeItem nodeId="9" label="Spanish">
-            <TreeItem nodeId="10" label="Calendar" />
-          </TreeItem>
-          <TreeItem nodeId="11" label="STEM">
-            <TreeItem nodeId="12" label="Calendar" />
-          </TreeItem>
-      </TreeView> */}
-      </div>
+      </div> */}
     </>
   );
 }

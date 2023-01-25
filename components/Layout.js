@@ -1,8 +1,7 @@
-import Navbar from './Navbar';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-import facePic from '../public/face.png';
+import styled from 'styled-components';
+import facePic from '../public/face1.jpeg';
+import Navbar from './Navbar';
 
 const ProfileImage = styled.div`
   height: 10rem;
@@ -33,7 +32,7 @@ export default function Layout({ children }) {
               color: 'blue',
               margin: '0 auto',
               display: 'inline',
-              pointerEvents: 'none'
+              pointerEvents: 'none',
             }}
           />
         </ProfileImage>
