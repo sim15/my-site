@@ -1,7 +1,14 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 
-import { Collapse, Grid, Spacer, Text, Tooltip } from '@nextui-org/react';
+import {
+  Badge,
+  Collapse,
+  Grid,
+  Spacer,
+  Text,
+  Tooltip,
+} from '@nextui-org/react';
 import { Award } from '/components/icons/index';
 
 import stylesProject from '../styles/Projects.module.css';
@@ -35,6 +42,20 @@ const NoteItem = ({ children, title, mainIcon }) => (
     >
       <div className="svgContainer">{mainIcon}</div>
     </Tooltip>
+  </>
+);
+
+const ProjectTag = ({ children, tags }) => (
+  <>
+    <Grid.Container gap={0.5}>
+      {tags.map((item, index) => (
+        <Grid>
+          <Badge disableOutline isSquared variant={'flat'}>
+            {item}
+          </Badge>
+        </Grid>
+      ))}
+    </Grid.Container>
   </>
 );
 
@@ -172,8 +193,8 @@ export default function Projects() {
                 <h3>Publications/Talks</h3>
                 <p>
                   <em>
-                    IEEE Symposium on Security and Privacy (Oakland) 2023
-                    , AMS-PME at the Joint Mathematics Meeting (JMM 2023)
+                    IEEE Symposium on Security and Privacy (Oakland) 2023 ,
+                    AMS-PME at the Joint Mathematics Meeting (JMM 2023)
                   </em>
                 </p>
 
@@ -209,7 +230,6 @@ export default function Projects() {
                 <p>
                   Sacha Servan-Schreiber, <u>Simon Beyzerov</u>, Eli Yablon
                 </p>
-
                 <h3>About</h3>
                 <p>
                   <Latex>
@@ -302,24 +322,75 @@ export default function Projects() {
               <ProjectItemCollapse
                 title="Autoregressive Conditional Heteroskedasticity Models of Volatility in Asset Pricing"
                 notes={[]}
-                links={[{ title: 'Paper', url: '/archpaper.pdf' },{ title: 'Slides', url: '/archtalk.pdf' }, {title: 'R code', url: 'https://github.com/sim15/arch_model'}]}
+                links={[
+                  { title: 'Paper', url: '/archpaper.pdf' },
+                  { title: 'Slides', url: '/archtalk.pdf' },
+                  {
+                    title: 'R code',
+                    url: 'https://github.com/sim15/arch_model',
+                  },
+                ]}
               >
+                <ProjectTag
+                  tags={[
+                    'time series analysis',
+                    'statistics',
+                    'econometrics',
+                    'R',
+                    <Latex>$\LaTeX$</Latex>,
+                  ]}
+                />
                 <h3>About</h3>
                 <p>
-                  An exploratory paper about conditional heteroskedasticity in financial market data and other applications. 
-                  Discusses the theory behind modeling autocorrelation within these systems through specialized time series analysis (ARCH) and provides insight into forecasting methodology.  
-                  Short talk given about identifying such processes part of a smaller project at WPI.  
+                  Explorative paper on conditional heteroskedasticity in
+                  financial market data and other applications. Discuss theory
+                  of modeling autocorrelation within these systems through
+                  specialized time series models (ARCH) and provide insight into
+                  forecasting methodology. (Specifically within risk analysis
+                  and volatility forecasting). Short talk given about
+                  identifying such processes part of a smaller project at WPI.
+                </p>
+                <h3>Abstract</h3>
+                <p>
+                  In this paper, we explore the development, identification, and
+                  motivations behind a fundamental class of time series models:
+                  autoregressive conditional heteroskedasticity (ARCH) models.
+                  First introduced by Robert Engle in his seminal work, ARCH
+                  models have given way to a rich class of econometric inquiry.
+                  Concerned with conditional-level fluctuations in variance,
+                  this unique class of models allows us to analyze dependence in
+                  residual series data. Finding particular applications within
+                  financial time series, ARCH modeling has shown continued
+                  success in risk analysis and volatility forecasting. They have
+                  especially seen applications within asset pricing, where risk
+                  is a central concern in making optimal financial decisions. We
+                  examine these considerations and more while discussing the
+                  motivations behind such models. By looking at the historical
+                  returns of one asset in particular, we provide a demonstrative
+                  analysis of the ARCH modeling process. We identify distinct
+                  effects in our data that suggest an ARCH process and go on to
+                  introduce a parsimonious model that fits our data well and
+                  forecasts future volatility
                 </p>
               </ProjectItemCollapse>
-              <ProjectItemCollapse title="HiMCM 2023" notes={[
+              <ProjectItemCollapse
+                title="HiMCM 2023"
+                notes={[
                   {
                     displayIcon: <Award />,
                     title: '',
                     description: 'Awarded Meritorious',
                   },
-                ]} links={[
-                  {title: 'Paper', url: '/HiMCM_12855.pdf'}
-                ]}>
+                ]}
+                links={[{ title: 'Paper', url: '/HiMCM_12855.pdf' }]}
+              >
+                <ProjectTag
+                  tags={[
+                    'mathematical modeling',
+                    'Python',
+                    <Latex>$\LaTeX$</Latex>,
+                  ]}
+                />
                 <h3>About</h3>
                 <p>
                   Mathematical modeling paper written during the 2022-23 High
@@ -331,13 +402,39 @@ export default function Projects() {
               <ProjectItemCollapse
                 title="Finite Group Theory and the Classification of Finite Simple Groups"
                 notes={[]}
-                links={[{ title: 'Paper', url: '/finSimpleGroups.pdf' },{ title: 'Slides', url: '/finSimpleGroupsSlides.pdf' }]}
+                links={[
+                  { title: 'Paper', url: '/finSimpleGroups.pdf' },
+                  { title: 'Slides', url: '/finSimpleGroupsSlides.pdf' },
+                ]}
               >
+                <ProjectTag
+                  tags={[
+                    'number theory',
+                    'finite group theory',
+                    'abstract algebra',
+                    <Latex>$\LaTeX$</Latex>,
+                  ]}
+                />
                 <h3>About</h3>
                 <p>
-                  A short talk (and accompanying write-up) on the <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups">
-                  classification</a> of finite <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Simple_group">
-                  simple groups</a>. Part of a smaller, two-week-long group theory project with WPI undergrads. 
+                  A short talk (and accompanying write-up) on the{' '}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups"
+                  >
+                    classification
+                  </a>{' '}
+                  of finite{' '}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://en.wikipedia.org/wiki/Simple_group"
+                  >
+                    simple groups
+                  </a>
+                  . Part of a smaller, two-week-long group theory project with
+                  WPI undergrads.
                 </p>
               </ProjectItemCollapse>
               <ProjectItemCollapse
@@ -351,6 +448,13 @@ export default function Projects() {
                 ]}
                 links={[{ title: 'Paper', url: '/immc_paper.pdf' }]}
               >
+                <ProjectTag
+                  tags={[
+                    'mathematical modeling',
+                    'Python',
+                    <Latex>$\LaTeX$</Latex>,
+                  ]}
+                />
                 <h3>About</h3>
                 <p>
                   Mathematical modeling paper written during a the 2022
@@ -370,6 +474,13 @@ export default function Projects() {
                 ]}
                 links={[]}
               >
+                <ProjectTag
+                  tags={[
+                    'mathematical modeling',
+                    'Python',
+                    <Latex>$\LaTeX$</Latex>,
+                  ]}
+                />
                 <h3>About</h3>
                 <p>
                   Mathematical modeling paper written during the 2021-22 High
@@ -391,6 +502,13 @@ export default function Projects() {
                 ]}
                 links={[]}
               >
+                <ProjectTag
+                  tags={[
+                    'mathematical modeling',
+                    'Python',
+                    <Latex>$\LaTeX$</Latex>,
+                  ]}
+                />
                 <h3>About</h3>
                 <p>
                   Mathematical modeling paper written during the 2022 MathWorks
@@ -419,12 +537,15 @@ export default function Projects() {
                   { title: 'Github', url: 'https://github.com/sim15/sigmaml' },
                 ]}
               >
+                <ProjectTag
+                  tags={['JavaScript', 'Svelte', 'Python', 'machine learning']}
+                />
                 <h3>About</h3>
                 <p>
                   A cross-platform desktop application for building machine
-                  learning models, aggregating all steps of the development
-                  process. Built with web-based technology: <u>JavaScript, Svelte,
-                  Electron, Python</u>.
+                  learning models with TensorFlow, aggregating all steps of the
+                  development process. Built with web-based technology:{' '}
+                  <u>JavaScript, Svelte, Electron, Python</u>.
                 </p>
               </ProjectItemCollapse>
               <ProjectItemCollapse
@@ -434,6 +555,7 @@ export default function Projects() {
                   { title: 'Github', url: 'https://github.com/sim15/Mealgo3' },
                 ]}
               >
+                <ProjectTag tags={['Java', 'Firebase']} />
                 <h3>About</h3>
                 <p>
                   Android application designed to provide intelligent meal and
@@ -448,6 +570,7 @@ export default function Projects() {
                 title="NaVi: Aid for Independent Navigation for the Visually Impaired"
                 links={[{ title: 'Poster', url: '/navi_poster.pdf' }]}
               >
+                <ProjectTag tags={['engineering', 'C++']} />
                 <h3>About</h3>
                 <p>
                   Designed a physical aid for the independent navigation of

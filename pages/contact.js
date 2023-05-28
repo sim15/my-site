@@ -42,12 +42,20 @@ export default function Contact() {
           <h2>Miscellaneous</h2>
           <ContactList>
             <ContactLi>
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sim15/">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/sim15/"
+              >
                 LinkedIn
               </a>
             </ContactLi>
             <ContactLi>
-              <a target="_blank" rel="noreferrer" href="https://github.com/sim15">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/sim15"
+              >
                 GitHub
               </a>
             </ContactLi>
@@ -55,7 +63,8 @@ export default function Contact() {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://scholar.google.com/citations?user=w08suY8AAAAJ&hl=en">
+                href="https://scholar.google.com/citations?user=w08suY8AAAAJ&hl=en"
+              >
                 Google Scholar
               </a>
             </ContactLi>

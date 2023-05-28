@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import styled from 'styled-components';
 
 const Nav = styled.nav`
   display: flex;
@@ -56,7 +56,8 @@ const SelectionBar = styled.div`
   background: black;
   /* top: 100%; */
   position: absolute;
-  left: ${(props) => findActiveIndex(props.routerPath) * (100 / navTabs.length)}%;
+  left: ${(props) =>
+    findActiveIndex(props.routerPath) * (100 / navTabs.length)}%;
   bottom: 0px;
   transition: 1000ms ease;
   border-radius: 2px;
@@ -73,7 +74,8 @@ const Navbar = () => {
             <ListItem
               key={item.title}
               className="list-class"
-              isActive={router.pathname == item.path}>
+              isActive={router.pathname == item.path}
+            >
               <Link href={item.path} passHref>
                 <StyledLink>{item.title}</StyledLink>
               </Link>
