@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import facePic from '../public/face1.jpeg';
+import facePic from '../public/beyz.png';
 import Navbar from './Navbar';
 
 const ProfileImage = styled.div`
@@ -41,7 +41,7 @@ export default function Layout({ children }) {
           <ProfileSection>
             <h1>Simon Beyzerov</h1>
             <div>
-              <span className="emphHeader">svbeyzerov [at] wpi.edu</span>
+              <span className="emphHeader">sbeyzerov [at] gmail.com</span>
             </div>
           </ProfileSection>
         </div>

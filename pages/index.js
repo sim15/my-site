@@ -45,8 +45,7 @@ export default function Home() {
             href="https://www.massacademy.org/"
           >
             Massachusetts Academy of Math and Science at WPI
-          </a>
-          .
+          </a>.
         </p>
         <p>
           I&apos;m broadly interested in mathematics and computer science, with
@@ -61,20 +60,19 @@ export default function Home() {
           <Image src={catPic} alt="Picture of my cat" />
         </TextPopover>
         <p style={{ display: 'inline' }}>
-          , making movies, playing minesweeper/football/
+          , making movies, playing minesweeper/
         </p>
         <TextPopover textContent={'my saxophone'}>
           <Image src={saxophone} alt="Picture of me playing the saxophone" />
         </TextPopover>
         <p style={{ display: 'inline' }}>
-          , listening to the same three songs on loop, or walking on my hands.
+          , listening to the same three EDM songs on loop, or walking on my hands.
         </p>
 
         <h2>Research</h2>
 
         <p>
-          Over the past few years, I&apos;ve been excited to use research to
-          explore connections between mathematics and computer science. Along
+          For the past few years, I&apos;ve explored theoretical computer science through research. Along
           with other ventures, I&apos;ve been working on projects in
           cryptography and theoretical computer science in conjunction with the{' '}
           <a target="_blank" rel="noreferrer" href="https://primes.mit.edu/">

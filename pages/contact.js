@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 const ContactColumns = styled.div`
@@ -35,7 +34,7 @@ export default function Contact() {
           <h2>Contact</h2>
           <ContactList>
             <ContactLi>Simon Beyzerov</ContactLi>
-            <ContactLi>svbeyzerov@wpi.edu</ContactLi>
+            <ContactLi>sbeyzerov [at] gmail.com</ContactLi>
           </ContactList>
         </ContactCol>
 

@@ -141,6 +141,10 @@ export default function Projects() {
                     url: 'https://eprint.iacr.org/2022/1707',
                   },
                   {
+                    title: 'Paper (conference version)',
+                    url: 'https://www.computer.org/csdl/proceedings-article/sp/2023/933600b257/1Js0DNr8h6U',
+                  },
+                  {
                     title: 'Slides',
                     url: 'https://sachaservanschreiber.com/slides/pacls.pdf',
                   },
@@ -168,8 +172,8 @@ export default function Projects() {
                 <h3>Publications/Talks</h3>
                 <p>
                   <em>
-                    IEEE Symposium on Security and Privacy (Oakland) 2023 (to
-                    appear), AMS-PME at the Joint Mathematics Meeting (JMM 2023)
+                    IEEE Symposium on Security and Privacy (Oakland) 2023
+                    , AMS-PME at the Joint Mathematics Meeting (JMM 2023)
                   </em>
                 </p>
 
@@ -296,6 +300,47 @@ export default function Projects() {
               css={{ padding: 0 }}
             >
               <ProjectItemCollapse
+                title="Autoregressive Conditional Heteroskedasticity Models of Volatility in Asset Pricing"
+                notes={[]}
+                links={[{ title: 'Paper', url: '/archpaper.pdf' },{ title: 'Slides', url: '/archtalk.pdf' }, {title: 'R code', url: 'https://github.com/sim15/arch_model'}]}
+              >
+                <h3>About</h3>
+                <p>
+                  An exploratory paper about conditional heteroskedasticity in financial market data and other applications. 
+                  Discusses the theory behind modeling autocorrelation within these systems through specialized time series analysis (ARCH) and provides insight into forecasting methodology.  
+                  Short talk given about identifying such processes part of a smaller project at WPI.  
+                </p>
+              </ProjectItemCollapse>
+              <ProjectItemCollapse title="HiMCM 2023" notes={[
+                  {
+                    displayIcon: <Award />,
+                    title: '',
+                    description: 'Awarded Meritorious',
+                  },
+                ]} links={[
+                  {title: 'Paper', url: '/HiMCM_12855.pdf'}
+                ]}>
+                <h3>About</h3>
+                <p>
+                  Mathematical modeling paper written during the 2022-23 High
+                  School Mathematical Contest in Modeling (HiMCM). Modeled the
+                  causes and impact of colony collapse disorder on honeybee
+                  populations.
+                </p>
+              </ProjectItemCollapse>
+              <ProjectItemCollapse
+                title="Finite Group Theory and the Classification of Finite Simple Groups"
+                notes={[]}
+                links={[{ title: 'Slides', url: '/finSimpleGroupsSlides.pdf' },{ title: 'Paper', url: '/finSimpleGroups.pdf' }]}
+              >
+                <h3>About</h3>
+                <p>
+                  A short talk (and accompanying write-up) on the <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups">
+                  classification</a> of finite <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Simple_group">
+                  simple groups</a>. Part of a smaller, two-week-long group theory project with WPI undergrads. 
+                </p>
+              </ProjectItemCollapse>
+              <ProjectItemCollapse
                 title="IMMC 2022"
                 notes={[
                   {
@@ -312,15 +357,6 @@ export default function Projects() {
                   International Mathematical Modeling Competition (IMMC).
                   Modeled planar loading and disembarking while optimizing both
                   processes in a diverse set of aircrafts.
-                </p>
-              </ProjectItemCollapse>
-              <ProjectItemCollapse title="HiMCM 2022" links={[]}>
-                <h3>About</h3>
-                <p>
-                  Mathematical modeling paper written during the 2022-23 High
-                  School Mathematical Contest in Modeling (HiMCM). Modeled the
-                  causes and impact of colony collapse disorder on honeybee
-                  populations. (currently in the process of submission)
                 </p>
               </ProjectItemCollapse>
               <ProjectItemCollapse
@@ -369,7 +405,7 @@ export default function Projects() {
         </Grid.Container>
       </div>
       <div>
-        <ColH2>Coding and more</ColH2>
+        <ColH2>Other</ColH2>
         <Grid.Container css={{ paddingLeft: '0.5rem' }}>
           <Grid>
             <Collapse.Group
@@ -383,16 +419,12 @@ export default function Projects() {
                   { title: 'Github', url: 'https://github.com/sim15/sigmaml' },
                 ]}
               >
-                <h3>Collaborators</h3>
-                <p>
-                  <u>Simon Beyzerov</u>, Aaron Tian
-                </p>
                 <h3>About</h3>
                 <p>
                   A cross-platform desktop application for building machine
                   learning models, aggregating all steps of the development
-                  process. Built with web-based technology: JavaScript, Svelte,
-                  Electron, Python.
+                  process. Built with web-based technology: <u>JavaScript, Svelte,
+                  Electron, Python</u>.
                 </p>
               </ProjectItemCollapse>
               <ProjectItemCollapse
@@ -409,7 +441,7 @@ export default function Projects() {
                   individual user preferences. Developed with a tailored dataset
                   of over 500,000 recipes and thousands of unique ingredients,
                   all with their respective nutritional information. Developed
-                  in Kotlin.
+                  in <u>Kotlin</u> and database hosted on <u>Firebase</u>.
                 </p>
               </ProjectItemCollapse>
               <ProjectItemCollapse
