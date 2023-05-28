@@ -331,7 +331,7 @@ export default function Projects() {
               <ProjectItemCollapse
                 title="Finite Group Theory and the Classification of Finite Simple Groups"
                 notes={[]}
-                links={[{ title: 'Slides', url: '/finSimpleGroupsSlides.pdf' },{ title: 'Paper', url: '/finSimpleGroups.pdf' }]}
+                links={[{ title: 'Paper', url: '/finSimpleGroups.pdf' },{ title: 'Slides', url: '/finSimpleGroupsSlides.pdf' }]}
               >
                 <h3>About</h3>
                 <p>
