@@ -49,8 +49,13 @@ const ProjectTag = ({ children, tags }) => (
   <>
     <Grid.Container gap={0.5}>
       {tags.map((item, index) => (
-        <Grid>
-          <Badge disableOutline isSquared variant={'flat'}>
+        <Grid key={item + index}>
+          <Badge
+            disableOutline
+            isSquared
+            variant={'flat'}
+            key={item + index + 'b'}
+          >
             {item}
           </Badge>
         </Grid>
@@ -337,7 +342,9 @@ export default function Projects() {
                     'statistics',
                     'econometrics',
                     'R',
-                    <Latex>$\LaTeX$</Latex>,
+                    <>
+                      <Latex>$\LaTeX$</Latex>
+                    </>,
                   ]}
                 />
                 <h3>About</h3>
@@ -388,7 +395,9 @@ export default function Projects() {
                   tags={[
                     'mathematical modeling',
                     'Python',
-                    <Latex>$\LaTeX$</Latex>,
+                    <>
+                      <Latex>$\LaTeX$</Latex>
+                    </>,
                   ]}
                 />
                 <h3>About</h3>
@@ -412,7 +421,9 @@ export default function Projects() {
                     'number theory',
                     'finite group theory',
                     'abstract algebra',
-                    <Latex>$\LaTeX$</Latex>,
+                    <>
+                      <Latex>$\LaTeX$</Latex>
+                    </>,
                   ]}
                 />
                 <h3>About</h3>
@@ -452,7 +463,9 @@ export default function Projects() {
                   tags={[
                     'mathematical modeling',
                     'Python',
-                    <Latex>$\LaTeX$</Latex>,
+                    <>
+                      <Latex>$\LaTeX$</Latex>
+                    </>,
                   ]}
                 />
                 <h3>About</h3>
@@ -478,7 +491,9 @@ export default function Projects() {
                   tags={[
                     'mathematical modeling',
                     'Python',
-                    <Latex>$\LaTeX$</Latex>,
+                    <>
+                      <Latex>$\LaTeX$</Latex>
+                    </>,
                   ]}
                 />
                 <h3>About</h3>
@@ -506,7 +521,9 @@ export default function Projects() {
                   tags={[
                     'mathematical modeling',
                     'Python',
-                    <Latex>$\LaTeX$</Latex>,
+                    <>
+                      <Latex>$\LaTeX$</Latex>
+                    </>,
                   ]}
                 />
                 <h3>About</h3>
