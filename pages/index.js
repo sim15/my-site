@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 import catPic from '../public/cat.jpg';
-import saxophone from '../public/simonPlayingSax.png';
 
 const PopImg = styled.div`
   width: 12em;
@@ -38,21 +37,15 @@ export default function Home() {
       <div>
         <h2>About me</h2>
         <p>
-          Hi! I&apos;m Simon, a senior at the{' '}
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.massacademy.org/"
-          >
-            Massachusetts Academy of Math and Science at WPI
-          </a>
-          .
+          Hi! I&apos;m Simon, an incoming freshman studying computer science at
+          Carnegie Mellon University.
         </p>
         <p>
           I&apos;m broadly interested in mathematics and computer science, with
           my primary research interests lying in theoretical computer science
           and cryptography. In general, I am most excited by problems at the
-          intersection of theory and practice.
+          intersection of theory and practice. For some of my work in crypto or
+          other areas, please see my <Link href="/projects">projects</Link>.
         </p>
         <p style={{ display: 'inline' }}>
           Outside of CS and Math, you may find me petting my&nbsp;
@@ -61,19 +54,18 @@ export default function Home() {
           <Image src={catPic} alt="Picture of my cat" />
         </TextPopover>
         <p style={{ display: 'inline' }}>
-          , making movies, playing minesweeper/
+          , making movies, playing minesweeper/saxophone
         </p>
-        <TextPopover textContent={'my saxophone'}>
+        {/* <TextPopover textContent={'my saxophone'}>
           <Image src={saxophone} alt="Picture of me playing the saxophone" />
-        </TextPopover>
+        </TextPopover> */}
         <p style={{ display: 'inline' }}>
-          , listening to the same three EDM songs on loop, or walking on my
-          hands.
+          , listening to the same three songs on loop, or walking on my hands.
         </p>
 
-        <h2>Research</h2>
+        {/* <h2>Research</h2> */}
 
-        <p>
+        {/* <p>
           For the past few years, I&apos;ve explored computer science through
           research. Along with other ventures, I&apos;ve been working on
           projects in cryptography and theoretical computer science in
@@ -94,12 +86,7 @@ export default function Home() {
             MIT CSAIL
           </a>
           .
-        </p>
-
-        <p>
-          For more details on my work in crypto or other areas, please see my{' '}
-          <Link href="/projects">projects</Link>.
-        </p>
+        </p> */}
 
         <h2>News</h2>
         <ul>

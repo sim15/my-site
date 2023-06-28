@@ -10,21 +10,55 @@
 html {
   background: #f3f5f987;
   color: var(--main-dark);
-}
-html,
-body {
-  padding: 3.5rem 20% 1rem 20%;
+  padding: 0;
   margin: 0;
+}
+
+html {
   font-family: Noto Sans, Segoe UI, -apple-system, BlinkMacSystemFont, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.pageBody {
+  padding: 7rem 35% 2rem 35%;
+}
+
+@media (max-width: 2000px) {
+  .pageBody {
+    padding-left: 28%;
+    padding-right: 28%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .pageBody {
+    padding-left: 22%;
+    padding-right: 22%;
+  }
+  /* 
+  .cat1 {
+    left: '5% !important';
+  } */
+}
+
 @media (max-width: 1300px) {
-  html,
-  body {
+  .pageBody {
     padding-left: 12%;
     padding-right: 12%;
   }
+
+  /* .cat {
+    display: none;
+  } */
 }
 
 @media (max-width: 1000px) {

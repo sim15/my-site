@@ -354,8 +354,9 @@ export default function Projects() {
                   of modeling autocorrelation within these systems through
                   specialized time series models (ARCH) and provide insight into
                   forecasting methodology. (Specifically within risk analysis
-                  and volatility forecasting). Short talk given about
-                  identifying such processes part of a smaller project at WPI.
+                  and volatility forecasting). Short accompanying talk given at
+                  Worcester Polytechnic Institute as a part of a smaller
+                  project.
                 </p>
                 <h3>Abstract</h3>
                 <p>

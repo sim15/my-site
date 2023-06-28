@@ -1,7 +1,7 @@
+import { SSRProvider } from '@react-aria/ssr';
+import { AnimatePresence, motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
-import { motion, AnimatePresence, useCycle } from 'framer-motion';
-import { SSRProvider } from '@react-aria/ssr';
 
 let navTabs = require('../pages/pages-tree.json');
 
@@ -34,23 +34,23 @@ const updateCurrentIndex = (r) => {
 
 var allVars = {
   pageInitial: {
-    opacity: 1
+    opacity: 1,
   },
   pageAnimate: {
     opacity: 1,
-    transform: 'translateX(0%)'
+    transform: 'translateX(0%)',
   },
   slideRight: {
     transform: 'translateX(5rem)',
-    opacity: 0
+    opacity: 0,
   },
   slideLeft: {
     transform: 'translateX(-5rem)',
-    opacity: 0
+    opacity: 0,
   },
   exitFade: {
-    opacity: 0
-  }
+    opacity: 0,
+  },
 };
 let animation = 'slideLeft';
 var changed = 0;
@@ -62,9 +62,11 @@ function MyApp({ Component, pageProps, router }) {
   const currentAnimation = (r, opening) => {
     const pageChange = updateCurrentIndex(r);
 
-    allVars.slidePrimary = allVars[['slideLeft', 'slidePrimary', 'slideRight'][1 + pageChange]];
+    allVars.slidePrimary =
+      allVars[['slideLeft', 'slidePrimary', 'slideRight'][1 + pageChange]];
 
-    allVars.slideSecondary = allVars[['slideRight', 'slideSecondary', 'slideLeft'][1 + pageChange]];
+    allVars.slideSecondary =
+      allVars[['slideRight', 'slideSecondary', 'slideLeft'][1 + pageChange]];
 
     if (opening) {
       return 'slidePrimary';
@@ -80,16 +82,17 @@ function MyApp({ Component, pageProps, router }) {
         variants={{
           hidden: {
             scale: 0.99,
-            opacity: 0
+            opacity: 0,
           },
           visible: {
             scale: 1,
             opacity: 1,
             transition: {
-              delay: 0.4
-            }
-          }
-        }}>
+              delay: 0.4,
+            },
+          },
+        }}
+      >
         <Layout>
           <AnimatePresence exitBeforeEnter>
             <motion.div
@@ -98,7 +101,8 @@ function MyApp({ Component, pageProps, router }) {
               exit={currentAnimation(router, false)}
               animate="pageAnimate"
               variants={allVars}
-              transition={{ type: 'tween', ease: 'easeOut', duration: 0.4 }}>
+              transition={{ type: 'tween', ease: 'easeOut', duration: 0.4 }}
+            >
               <Component {...pageProps} />
             </motion.div>
           </AnimatePresence>
