@@ -1,6 +1,9 @@
 // const { gsap } = require('gsap/dist/gsap');
 // const { Draggable } = require('gsap/dist/Draggable');
+import { Tooltip } from '@nextui-org/react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import facePic from '../public/beyz.png';
 import Navbar from './Navbar';
@@ -135,11 +138,25 @@ const ProfileSection = styled.div`
 }
 
 export default function Layout({ children }) {
+  const [isCopiedEmail, setCopiedEmail] = useState(false);
+
   return (
     <>
       <div className="pageBody">
         <div className="navWrapper">
-          <ProfileImage>
+          <motion.div
+            css={{
+              height: '10rem',
+              width: '10rem',
+              overflow: 'hidden',
+              position: 'relative',
+              borderRadius: '50%',
+              cursor: 'pointer',
+              userSelect: 'none',
+            }}
+            whileTap={{ scale: 1.04 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 5 }}
+          >
             <Image
               src={facePic}
               alt="Picture of my face"
@@ -154,13 +171,46 @@ export default function Layout({ children }) {
                 pointerEvents: 'none',
               }}
             />
-          </ProfileImage>
+          </motion.div>
 
           <div>
             <ProfileSection>
               <h1>Simon Beyzerov</h1>
               <div>
-                <span className="emphHeader">sbeyzerov [at] gmail.com</span>
+                <Tooltip
+                  className="emphHeader"
+                  content={isCopiedEmail ? 'copied' : 'copy'}
+                  shadow={true}
+                  style={{ display: 'inline' }}
+                  color="primary"
+                  trigger="hover"
+                  placement="rightStart"
+                >
+                  <motion.span
+                    style={{
+                      cursor: 'pointer',
+                      color: isCopiedEmail
+                        ? 'var(--main-gray)'
+                        : 'var(--main-dark)',
+                    }}
+                    onClick={() => {
+                      navigator.clipboard.writeText('sbeyzerov@gmail.com');
+                      setCopiedEmail(!isCopiedEmail);
+                    }}
+                    onMouseLeave={() => setCopiedEmail(false)}
+                    transition={{
+                      ease: 'linear',
+                      duration: 2,
+                      x: { duration: 1 },
+                    }}
+                  >
+                    sbeyzerov [at] gmail.com
+                  </motion.span>
+                </Tooltip>
+                {/* <span className="emphHeader">
+                  
+                  sbeyzerov [at] gmail.com
+                  </span> */}
               </div>
             </ProfileSection>
           </div>

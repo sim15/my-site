@@ -37,15 +37,16 @@ export default function Home() {
       <div>
         <h2>About me</h2>
         <p>
-          Hi! I&apos;m Simon, an incoming freshman studying computer science at
-          Carnegie Mellon University.
+          Hi! I&apos;m Simon, an undergrad computer science student at Carnegie
+          Mellon. I&apos;m broadly interested in mathematics and computer
+          science, with my primary research interests lying in theoretical
+          computer science and (as of recently) cryptography. In general,
+          I&apos;m most excited by problems at the intersection of theory and
+          practice :)
         </p>
         <p>
-          I&apos;m broadly interested in mathematics and computer science, with
-          my primary research interests lying in theoretical computer science
-          and cryptography. In general, I am most excited by problems at the
-          intersection of theory and practice. For some of my work in crypto or
-          other areas, please see my <Link href="/projects">projects</Link>.
+          For some of my work in crypto or other areas, please see my{' '}
+          <Link href="/projects">projects</Link>.
         </p>
         <p style={{ display: 'inline' }}>
           Outside of CS and Math, you may find me petting my&nbsp;
@@ -54,13 +55,15 @@ export default function Home() {
           <Image src={catPic} alt="Picture of my cat" />
         </TextPopover>
         <p style={{ display: 'inline' }}>
-          , making movies, playing minesweeper/saxophone
+          , making movies, playing minesweeper or my saxophone
         </p>
         {/* <TextPopover textContent={'my saxophone'}>
           <Image src={saxophone} alt="Picture of me playing the saxophone" />
         </TextPopover> */}
         <p style={{ display: 'inline' }}>
           , listening to the same three songs on loop, or walking on my hands.
+          If you&apos;d like to <Link href="/contact">contact</Link> me, feel
+          free to reach out to my email at the top of the page!
         </p>
 
         {/* <h2>Research</h2> */}
@@ -88,7 +91,7 @@ export default function Home() {
           .
         </p> */}
 
-        <h2>News</h2>
+        {/* <h2>News</h2>
         <ul>
           <li>
             <p>
@@ -115,7 +118,7 @@ export default function Home() {
               the Joint Mathematics Meeting (JMM 2023)
             </p>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </>
   );
