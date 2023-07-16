@@ -37,12 +37,11 @@ export default function Home() {
       <div>
         <h2>About me</h2>
         <p>
-          Hi! I&apos;m Simon, an undergrad computer science student at Carnegie
-          Mellon. I&apos;m broadly interested in mathematics and computer
-          science, with my primary research interests lying in theoretical
-          computer science and (as of recently) cryptography. In general,
-          I&apos;m most excited by problems at the intersection of theory and
-          practice :)
+          Hi! I&apos;m Simon, an undergraduate computer science student at
+          Carnegie Mellon University. I&apos;m broadly interested in mathematics
+          and computer science, with my primary research interests lying in
+          theoretical computer science and cryptography. In general, I&apos;m
+          most excited by problems at the intersection of theory and practice :)
         </p>
         <p>
           For some of my work in crypto or other areas, please see my{' '}
