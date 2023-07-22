@@ -705,6 +705,19 @@ export default function Projects() {
               css={{ padding: 0 }}
             >
               <ProjectItemCollapse
+                title="Event-driven Backtesting Library (C++)"
+                links={[
+                  {
+                    title: 'Github',
+                    url: 'https://github.com/sim15/backtester',
+                  },
+                ]}
+              >
+                <ProjectTag tags={['C++', 'financial engineering']} />
+                <h3>About</h3>
+                <p>Coming very, very soon! Code available upon request.</p>
+              </ProjectItemCollapse>
+              <ProjectItemCollapse
                 title="SigmaML"
                 links={[
                   { title: 'Slides', url: '/sigmaml_slides.pdf' },
@@ -729,7 +742,7 @@ export default function Projects() {
                   { title: 'Github', url: 'https://github.com/sim15/Mealgo3' },
                 ]}
               >
-                <ProjectTag tags={['Java', 'Firebase']} />
+                <ProjectTag tags={['Java', 'Firebase', 'data science']} />
                 <h3>About</h3>
                 <p>
                   Android application designed to provide intelligent meal and

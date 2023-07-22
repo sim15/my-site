@@ -38,31 +38,36 @@ export default function Home() {
         <h2>About me</h2>
         <p>
           Hi! I&apos;m Simon, an undergraduate computer science student at
-          Carnegie Mellon University. I&apos;m broadly interested in mathematics
-          and computer science, with my primary research interests lying in
-          theoretical computer science and cryptography. In general, I&apos;m
-          most excited by problems at the intersection of theory and practice :)
+          Carnegie Mellon. I&apos;m broadly interested in mathematics and
+          computer science, with my primary research interests lying in applied
+          cryptography, algorithms, distributed computing, and theoretical
+          computer science as a whole.
+        </p>
+        <p></p>
+        <p>
+          In general, I&apos;m most excited by new problems at the intersection
+          of theory and practice :)
         </p>
         <p>
-          For some of my work in crypto or other areas, please see my{' '}
+          For some of my work in crypto and other areas, please see my{' '}
           <Link href="/projects">projects</Link>.
         </p>
         <p style={{ display: 'inline' }}>
-          Outside of CS and Math, you may find me petting my&nbsp;
+          Outside of CS and Math, you may find me chasing my&nbsp;
         </p>
         <TextPopover textContent={'cat'}>
           <Image src={catPic} alt="Picture of my cat" />
         </TextPopover>
         <p style={{ display: 'inline' }}>
-          , making movies, playing minesweeper or my saxophone
+          , spending too much time practicing minesweeper puzzles
         </p>
         {/* <TextPopover textContent={'my saxophone'}>
           <Image src={saxophone} alt="Picture of me playing the saxophone" />
         </TextPopover> */}
         <p style={{ display: 'inline' }}>
-          , listening to the same three songs on loop, or walking on my hands.
-          If you&apos;d like to <Link href="/contact">contact</Link> me, feel
-          free to reach out to my email at the top of the page!
+          , listening to the same three EDM songs on loop, and walking on my
+          hands. If you&apos;d like to <Link href="/contact">contact</Link> me,
+          feel free to reach out!
         </p>
 
         {/* <h2>Research</h2> */}
