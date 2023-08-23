@@ -745,9 +745,9 @@ export default function Projects() {
                 <p>
                   Open-source backtesting suite written from scratch in C++.
                   Heavily inspired by the structure outlined in Michael
-                  Halls-Moore's Successful Algorithmic Trading (modified and
-                  optimized in certain areas). Partially under development and
-                  open for modification for custom portfolio environments;
+                  Halls-Moore&apos;s Successful Algorithmic Trading (modified
+                  and optimized in certain areas). Partially under development
+                  and open for modification for custom portfolio environments;
                   primarily intended as base for larger backtesting
                   infrastructure projects and quick, performant testing of
                   complex strategies for hobbyists :)
