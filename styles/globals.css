@@ -74,7 +74,20 @@ body::-webkit-scrollbar {
 @media (max-width: 900px) {
   html,
   body {
+    font-size: 90%;
     padding: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  html,
+  body {
+    font-size: 80%;
+    padding: 1rem;
+  }
+  .pageBody {
+    padding-left: 1%;
+    padding-right: 1%;
   }
 }
 
