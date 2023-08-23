@@ -37,37 +37,49 @@ export default function Home() {
       <div>
         <h2>About me</h2>
         <p>
-          Hi! I&apos;m Simon, an undergraduate computer science student at
-          Carnegie Mellon. I&apos;m broadly interested in mathematics and
-          computer science, with my primary research interests lying in applied
-          cryptography, algorithms, distributed computing, and theoretical
-          computer science as a whole.
+          Hi! I&apos;m Simon, a freshman computer science student at Carnegie
+          Mellon University. I&apos;m broadly interested in mathematics and
+          computer science, with my primary research interests lying in
+          cryptography, distributed computing, and theoretical computer science
+          as a whole.
         </p>
         <p></p>
         <p>
-          In general, I&apos;m most excited by new problems at the intersection
-          of theory and practice :)
+          Over the past few years, I&apos;ve been heavily involved in a series
+          of (primarily theoretical) research projects with MIT&apos;s
+          Computational Structures Group looking at privacy-preserving database
+          access, and more recently have joined Tensordock in expanding their
+          decentralized cloud-GPU network.{' '}
         </p>
+
         <p>
-          For some of my work in crypto and other areas, please see my{' '}
+          In general, I&apos;m most excited by new problems at the intersection
+          of theory and practice, especially using new theoretical tools to
+          improve existing systems&apos; privacy and performance :) For some of
+          my work in crypto and other areas, please see my{' '}
           <Link href="/projects">projects</Link>.
         </p>
         <p style={{ display: 'inline' }}>
-          Outside of CS and Math, you may find me chasing my&nbsp;
+          Outside of CS and Math you may find me chasing my&nbsp;
         </p>
         <TextPopover textContent={'cat'}>
           <Image src={catPic} alt="Picture of my cat" />
         </TextPopover>
         <p style={{ display: 'inline' }}>
-          , spending too much time practicing minesweeper puzzles
+          , spending too much time on minesweeper puzzles
         </p>
         {/* <TextPopover textContent={'my saxophone'}>
           <Image src={saxophone} alt="Picture of me playing the saxophone" />
         </TextPopover> */}
         <p style={{ display: 'inline' }}>
-          , listening to the same three EDM songs on loop, and walking on my
-          hands. If you&apos;d like to <Link href="/contact">contact</Link> me,
-          feel free to reach out!
+          , and walking on my hands. I&apos;m also a big fan of all Boston
+          sports teams and especially love keeping up with football and
+          basketball.
+        </p>
+        <p></p>
+        <p>
+          If you&apos;d like to <Link href="/contact">chat</Link>, feel free to
+          reach out!
         </p>
 
         {/* <h2>Research</h2> */}
