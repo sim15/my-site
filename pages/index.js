@@ -40,8 +40,8 @@ export default function Home() {
           Hi! I&apos;m Simon, a freshman computer science student at Carnegie
           Mellon University. I&apos;m broadly interested in mathematics and
           computer science, with my primary research interests lying in
-          cryptography, distributed computing, and theoretical computer science
-          as a whole.
+          cryptography, cloud computing, and theoretical computer science as a
+          whole.
         </p>
         <p></p>
         <p>
