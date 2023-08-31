@@ -37,7 +37,7 @@ export default function Home() {
       <div>
         <h2>About me</h2>
         <p>
-          Hi! I&apos;m Simon, a freshman computer science student at Carnegie
+          Hi! I&apos;m Simon, a computer science student at Carnegie
           Mellon University. I&apos;m broadly interested in mathematics and
           computer science, with my primary research interests lying in
           cryptography, cloud computing, and theoretical computer science as a
