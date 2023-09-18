@@ -45,7 +45,7 @@ export default function Home() {
         </p>
         <p></p>
         <p>
-          Over the past few years, I&aposs;ve been heavily involved in a series
+          Over the past few years, I&apos;ve been heavily involved in a series
           of research projects with MIT&apos;s Computational Structures Group
           looking at privacy-preserving database access, and more recently have
           joined Tensordock as a Software Engineer to help expand their
