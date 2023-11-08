@@ -144,10 +144,10 @@ export default function CV() {
       <CvSectionTitle>Publications</CvSectionTitle>
       <IndentUL>
         <CvLiItem>
-          S. Servan-Schreiber, S. Beyzerov, E. Yablon and H. Park, "Private
-          Access Control for Function Secret Sharing," in 2023 IEEE Symposium on
-          Security and Privacy (SP), San Francisco, CA, US, 2023 pp. 809-828.
-          doi: 10.1109/SP46215.2023.00072
+          S. Servan-Schreiber, S. Beyzerov, E. Yablon and H. Park, &quot;Private
+          Access Control for Function Secret Sharing,&quot; in 2023 IEEE
+          Symposium on Security and Privacy (SP), San Francisco, CA, US, 2023
+          pp. 809-828. doi: 10.1109/SP46215.2023.00072
         </CvLiItem>
       </IndentUL>
     </>
