@@ -35,6 +35,7 @@ export default function Contact() {
           <ContactList>
             <ContactLi>Simon Beyzerov</ContactLi>
             <ContactLi>sbeyzerov [at] gmail.com</ContactLi>
+            <ContactLi>sbeyzero [at] andrew.cmu.edu</ContactLi>
           </ContactList>
         </ContactCol>
 

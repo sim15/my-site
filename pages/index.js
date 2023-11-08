@@ -37,16 +37,16 @@ export default function Home() {
       <div>
         <h2>About me</h2>
         <p>
-          Hi! I&apos;m Simon, a computer science student at Carnegie Mellon
-          University. I&apos;m broadly interested in mathematics and computer
-          science, with my primary research interests lying in cryptography,
-          cloud and distributed computing, and theoretical computer science as a
-          whole.
+          Hi! I&apos;m Simon, an undegrad computer science student at Carnegie
+          Mellon University. I&apos;m broadly interested in computer science and
+          mathematics, particularly in cryptography and theoretical computer
+          science as a whole. More recently I&apos;ve also been curious about
+          systems and cloud computing.
         </p>
         <p></p>
         <p>
-          Over the past few years, I&apos;ve been heavily involved in a series
-          of research projects with MIT&apos;s Computational Structures Group
+          Over the past few years, I&apos;ve been involved in a series of
+          research projects with MIT&apos;s Computational Structures Group
           looking at privacy-preserving database access, and more recently have
           joined Tensordock as a Software Engineer to help expand their
           decentralized cloud-GPU network.{' '}
@@ -55,8 +55,8 @@ export default function Home() {
         <p>
           In general, I&apos;m most excited by new problems at the intersection
           of theory and practice, especially using new theoretical tools to
-          improve existing systems&apos; privacy and performance :) For some of
-          my work in crypto and other areas, please see my{' '}
+          improve existing systems&apos; privacy and performance. For some of my
+          work in crypto and other areas, please see my{' '}
           <Link href="/projects">projects</Link>.
         </p>
         <p style={{ display: 'inline' }}>
