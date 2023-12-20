@@ -766,7 +766,7 @@ export default function Projects() {
                 <h3>About</h3>
                 <p>
                   A cross-platform desktop application for building machine
-                  learning models with TensorFlow, aggregating all steps of the
+                  learning models with PyTorch, aggregating all steps of the
                   development process. Built with web-based technology:{' '}
                   <u>JavaScript, Svelte, Electron, Python</u>.
                 </p>
